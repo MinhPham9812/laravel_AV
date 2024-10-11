@@ -1,6 +1,6 @@
 <!-- Footer -->
 <div id="footer">
-    <a href="index.html">
+    <a href="{{ url('/') }}">
         <div id="nav-logo-footer">
             <img src="assets/images/logo_Aking.svg" alt="logo">
             <div class="logo-text-footer">

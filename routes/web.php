@@ -17,3 +17,11 @@ Route::get('/news', function () {
 Route::get('/news-detail', function () {
     return view('news_detail');
 });
+
+Route::get('/newsProject', function () {
+    return view('newsProject');
+});
+
+Route::get('/notificationPage', function () {
+    return view('notificationPage');
+});
