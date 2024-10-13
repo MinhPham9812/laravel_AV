@@ -215,17 +215,30 @@ html, body {
     font-weight: bold; /* Làm chữ đậm */
 }
 /* end Slider */
+.container{
+    width: 1460px;
+}
 
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100%;
+    }
+}
 /* Tabs */
 
 #tabs{
     height: 100px;
     width: 1460px;
     margin: 88px auto 70px ;
+
+}
+
+.nav-tabs{
+    justify-content: center;
 }
 
 .nav-link{
-    width: 315px;
+    width: 292px;
     height: 100px;
     display: flex;
     justify-content: center;  /* Căn giữa theo chiều ngang */

@@ -1,5 +1,9 @@
-<button id="scrollToTop" class="scrollToTop fa-solid fa-arrow-up" style="display: none;"></button>
-            <!-- Content -->
+@extends('layouts.tab_news')
+
+@section('title', 'Tin Tức')
+
+@section('tab_content')
+            
             <div class="slider-news-detail">
                 <div id="content">
                     <!-- Title News -->
@@ -63,5 +67,5 @@
                 </div>
             </div>
 
-            
-            <!-- end Content -->
+            <button id="scrollToTop" class="scrollToTop fa-solid fa-arrow-up" style="display: none;"></button>
+@endsection
