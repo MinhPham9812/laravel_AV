@@ -30,9 +30,9 @@
             
             <div id="news-detail-container" style="display:none;"></div> --}}
 
-            <div class="container">
-                @yield('content')
-            </div>
+            
+             @yield('content')
+            
             
             <!-- Footer -->
             <x-footer />

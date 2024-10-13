@@ -215,20 +215,12 @@ html, body {
     font-weight: bold; /* Làm chữ đậm */
 }
 /* end Slider */
-.container{
-    width: 1460px;
-}
 
-@media (min-width: 1400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 100%;
-    }
-}
 /* Tabs */
 
 #tabs{
     height: 100px;
-    width: 1460px;
+    max-width: 76%;
     margin: 88px auto 70px ;
 
 }
