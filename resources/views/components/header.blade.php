@@ -1,5 +1,6 @@
 <!-- Header -->
 <div id="header">
+    <div class="test">
     <a href="{{ url('/') }}">
         <div class="nav-logo">
             <img src="assets/images/logo_Aking.svg" alt="logo">
@@ -27,6 +28,8 @@
         <a href="" class="social-lang vi">VI</a>
         <a href="" class="social-lang en">EN</a>
     </div>
+    </div>
+    
 
     <label for="nav-mobile-input" class="nav-bars-btn"><i class="fa-solid fa-bars"></i></label>
     <input type="checkbox" class="nav-input" id="nav-mobile-input" >
