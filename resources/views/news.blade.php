@@ -2,18 +2,20 @@
 
 @section('title', 'Tin Tức')
 <!-- Content -->
-@section('tab_content')
+@section('tin-aking')
 <div id="slider-news-container" class="slider-news">
     <div id="content">
         <div class="row">
             <!-- column 1 -->
                 <div class="col-xxl larg-news-item">
+                    <a href="{{ url('/news-detail') }}">
                     <img src="assets/images/Rectangle1.svg" alt="">
                     <div class="overlay-text">
                         <i>11/5/2022</i>
                         <h4>AKING VILLAGE KHẲNG ĐỊNH UY TÍN TỪ NHỮNG DỰ ÁN BÀN GIAO ĐÚNG TIẾN ĐỘ</h4>
                         <p>20 năm thực hiện tôn chỉ “Nơi đặt niềm tin, Nơi xây tổ ấm”, hoạt động kinh doanh dựa trên nền tảng giá trị cốt lõi: pháp lý vững chắc, thông tin minh bạch, sản phẩm chất lượng và dịch vụ tận tâm, AKI VILLAGE đang khẳng định tầm vóc của một thương hiệu Việt...</p>
                     </div>
+                    </a>
                 </div>
 
             <!-- column 2 -->

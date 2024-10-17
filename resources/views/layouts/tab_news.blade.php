@@ -2,46 +2,67 @@
 
 @section('content')
 <div id="tabs">
-    <ul class="nav nav-tabs">
-        
-        <li class="nav-item">
-            <a class="nav-link active" id="news-link" href="javascript:void(0)">Tin Aking Village</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="newsProject-link" href="javascript:void(0)">Tin dự án</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="notificationPage-link" href="javascript:void(0)">Thông báo</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Sự kiện</a>
-          </li>
-    </ul>
+  <ul class="nav nav-tabs"> 
+      <li class="nav-item {{ Request::is('news') ? 'active' : '' }}">
+          <a class="nav-link" id="news-link" href="{{ url('/news')}}">Tin Aking Village</a>
+          <a class="nav-arrow-right fa-solid fa-chevron-right"></a>  <!-- Mũi tên phải -->
+      </li>
+      <li class="nav-item {{ Request::is('newsProject') ? 'active' : '' }}">
+          <i class="nav-arrow-left fa-solid fa-chevron-left"></i> <!-- Mũi tên trái -->
+          <a class="nav-link" id="newsProject-link" href="{{ url('/newsProject')}}">Tin dự án</a>
+          <i class="nav-arrow-right fa-solid fa-chevron-right"></i> <!-- Mũi tên phải -->
+      </li>
+      <li class="nav-item {{ Request::is('notificationPage') ? 'active' : '' }}">
+          <i class="nav-arrow-left fa-solid fa-chevron-left"></i> <!-- Mũi tên trái -->
+          <a class="nav-link" id="notificationPage-link" href="{{ url('/notificationPage')}}">Thông báo</a>
+          <i class="nav-arrow-right fa-solid fa-chevron-right"></i> <!-- Mũi tên phải -->
+      </li>
+      <li class="nav-item {{ Request::is('event') ? 'active' : '' }}">
+        <i class="nav-arrow-left fa-solid fa-chevron-left"></i> <!-- Mũi tên trái -->
+        <a class="nav-link" href="{{ url('/event')}}">Sự kiện</a>
+    </li>
+  </ul>
 </div>
+
   
   <div id="tab-content">
-    <div id="news" class="tab-pane active">
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+    <!-- Kiểm tra xem có ở trang news_detail hay không -->
+    @if(Request::is('news-detail'))
+        @yield('news-detail') <!-- Load nội dung chi tiết bài viết -->
+    @elseif(Request::is('news'))
+      <div id="news" class="tab-pane active">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
 
-              <!-- Slider News -->
-              <div class="swiper-slide">
-                @yield('tab_content')
-              </div>
-              <!-- end Slider News -->
+                <!-- Slider News -->
+                <div class="swiper-slide">
+                  @yield('tin-aking')
+                </div>
+                <!-- end Slider News -->
 
-              <div class="swiper-slide">slider 2</div>
+                <div class="swiper-slide">slider 2</div>
 
-              <div class="swiper-slide">slider 3</div>
-              
-              <div class="swiper-slide">slider 4</div>
-          </div>
-            <!-- Pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">slider 3</div>
+                
+                <div class="swiper-slide">slider 4</div>
+            </div>
+              <!-- Pagination -->
+                  <div class="swiper-pagination"></div>
+        </div>
+      </div> 
+    @elseif(Request::is('newsProject'))  
+      <div id="newsProject" class="tab-pane">
+        @yield('newsProject')  
+      </div> 
+    @elseif(Request::is('notificationPage'))  
+      <div id="notificationPage" class="tab-pane">
+        @yield('notificationPage')
+      </div> 
+    @elseif(Request::is('event'))  
+      <div id="event" class="tab-pane">
+        @yield('event')
       </div>
-    </div> 
-    <div id="newsProject" class="tab-pane"></div> <!-- Tab 2 -->
-    <div id="notificationPage" class="tab-pane"></div> <!-- Tab 3 -->
-</div>
+    @endif
+  </div>
 @endsection

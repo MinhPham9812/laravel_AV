@@ -19,86 +19,126 @@ html, body {
 
 /* Header */
 #header {
-    height: 127px; /* Đặt chiều cao cho header */
-    background-color: var(--primary); /* Màu nền của header (được lấy từ biến CSS) */
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 127px;
+    background-color: var(--primary); /* Your green background color */
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: center;
+    box-sizing: border-box;
+    transition: all 0.6s ease; /* Chuyển đổi hiệu ứng khi header di chuyển */
+    z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
 }
 
-.test{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 /* Logo */
 .nav-logo {
-    position: absolute;
-    display: flex; /* Sử dụng Flexbox để logo và văn bản bên cạnh xếp hàng ngang */
-    align-items: center; /* Căn giữa logo và văn bản theo chiều dọc */
-    gap: 5px; /* Khoảng cách giữa logo và văn bản (AKING và VILLAGE) */
-    top: 25%;
-    left: 12%;
-    width: 103px;
-    height: 71px;
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center;
+    gap: 5px; /* Space between logo and text */
+    flex-shrink: 0; /* Logo sẽ không co lại */
+    min-width: 150px; /* Đặt chiều rộng tối thiểu để logo không bị nhỏ lại */
+    transition: all 0.6s ease;
+    padding: 0 30px;
+    margin-right: 30px;
 }
 
 .nav-logo img {
-    height: 70px; /* Điều chỉnh chiều cao của logo */
+    height: 70px; /* Logo height as in the original */
 }
 
-/* Văn bản AKING và VILLAGE */
+/* Logo text */
 .logo-text {
     display: flex;
-    flex-direction: column; /* Xếp chữ AKING và VILLAGE theo cột (AKING ở trên, VILLAGE ở dưới) */
-    align-items: flex-start; /* Căn chữ về bên trái */
-    text-decoration: none;
+    flex-direction: column; /* Vertically stack the text */
+    align-items: flex-start;
 }
 
 .logo-text-aking, .logo-text-village {
-    font-size: 14px; /* Điều chỉnh kích thước chữ */
-    color: #ffffff; /* Màu chữ trắng */
+    font-size: 12px;
+    font-family: "Barlow";
+    color: #ffffff;
     font-weight: normal;
 }
 
-
+/* Navigation menu */
 .nav-menu {
-    position: absolute;
-    display: flex; /* Sử dụng Flexbox để sắp xếp các mục trong menu */
-    justify-content: space-between;
-    gap: 50px; /* Khoảng cách giữa các mục menu */
-    list-style: none; /* Xóa dấu bullet (chấm đầu dòng) của các mục danh sách */
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    font-size: 0.7vw;
+    display: flex; /* Flexbox for horizontal menu */
+    justify-content: space-evenly; /* Center the menu */
+    align-items: center;
+    gap: 3.5vw; /* Space between menu items */
+    list-style: none; /* Remove bullets */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease
 }
 
 .nav-menu li a {
-    color: #fff; /* Màu chữ trắng cho các liên kết trong menu */
-    text-decoration: none; /* Loại bỏ gạch chân mặc định của các liên kết */
-    font-weight: bold; /* Làm đậm chữ của các liên kết trong menu */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    position: relative; /* Để dùng pseudo-element */
 }
 
-/* Phần mạng xã hội */
+/* Hover effect for menu items */
+.nav-menu li a:hover {
+    opacity: 0.8;
+}
+
+.nav-logo:hover, .social-icon:hover
+, .social-lang.vi:hover, .social-lang.en:hover {
+    opacity: 0.8; /* Làm mờ logo */
+}
+
+
+/* 
+Border-bottom animation:
+Tạo đường kẻ (border-bottom) ảo bằng cách sử dụng pseudo-element ::before.
+Ban đầu đường kẻ có width 0 (nên không hiển thị), và được đặt phía dưới chữ. 
+*/
+.nav-menu li a::before {
+    content: ""; /* Tạo phần tử giả, không có nội dung */
+    position: absolute; /* Đặt vị trí tuyệt đối so với phần tử cha */
+    width: 0; /* Đường kẻ ban đầu có chiều rộng bằng 0 */
+    height: 2px; /* Độ dày của đường kẻ */
+    bottom: -2px; /* Đặt đường kẻ cách text 2px ở phía dưới */
+    left: 0; /* Đường kẻ bắt đầu từ phía bên trái */
+    background-color: #fff; /* Màu sắc của đường kẻ là trắng */
+    transition: all 0.3s ease-in-out; /* Hiệu ứng mượt khi mở rộng width */
+}
+
+/* 
+Hover effect for border-bottom:
+Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visible) và mở rộng chiều rộng từ 0% đến 100%.
+*/
+.nav-menu li a:hover::before {
+    width: 100%; /* Mở rộng đường kẻ từ 0% lên 100% */
+}
+
+/* Social icons and language */
 .nav-social {
-    position: absolute;
-    top: 40%;
-    right: 8%;
-    display: flex; /* Sử dụng Flexbox để sắp xếp các biểu tượng mạng xã hội */
-    align-items: center; /* Căn giữa các biểu tượng theo chiều dọc */
-    gap: 10px; /* Khoảng cách giữa các biểu tượng mạng xã hội */
-    margin-right: 54px; /* Thêm khoảng cách giữa các biểu tượng mạng xã hội và cạnh phải của header */
+    display: flex; /* Flexbox to arrange the items */
+    align-items: center;
+    gap: 20px; /* Space between the social icons and language switch */
+    flex-shrink: 0; /* Logo sẽ không co lại */
+    min-width: 150px; /* Đặt chiều rộng tối thiểu để logo không bị nhỏ lại */
+    margin-left: 77px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
 .nav-social a {
-    color: #fff; /* Màu chữ trắng cho các liên kết mạng xã hội */
-    text-decoration: none; /* Loại bỏ gạch chân của các liên kết mạng xã hội */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .social-icon {
     font-weight: bold; /* Làm đậm chữ của biểu tượng mạng xã hội (ví dụ như Facebook "f") */
-    font-size: 16px; /* Kích thước chữ cho biểu tượng mạng xã hội */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Tạo bóng với màu đen và độ mờ */
 }
 
 .social-lang.vi {
@@ -111,7 +151,7 @@ html, body {
     content: ''; /* Thêm nội dung giả (dấu phân cách |) sau chữ "VI" */
     position: absolute; /* Định vị tuyệt đối cho đường phân cách */
     right: 0; /* Đặt đường phân cách ở phía bên phải của chữ "VI" */
-    top: 5px; /* Đặt vị trí của đường phân cách từ trên xuống */
+    top: 2px; /* Đặt vị trí của đường phân cách từ trên xuống */
     bottom: 0; /* Đường phân cách sẽ chạy từ đầu tới đáy của phần tử */
     width: 1px; /* Độ rộng của đường phân cách */
     height: 16px; /* Đặt chiều cao cố định của đường phân cách */
@@ -119,83 +159,144 @@ html, body {
     margin-left: 5px; /* Tạo khoảng cách giữa đường phân cách và chữ "EN" */
 }
 
-/* Nav-mobile */
-.nav-bars-btn {
-    position: absolute;
-    top: 25%;
-    right: 4%;
-    font-size: 40px;
-    color: #fff;
+.nav-bars-btn{
     display: none;
 }
 
-.nav-overlay{
+.nav-search{
+    display: none;
+}
+
+@media (max-width: 1440px){
+    #header{
+        height: 100px !important;
+        padding: 0 6vw;
+    }
+
+    .nav-menu{
+        font-size: 13px;
+        gap: 2.5vw;
+    }
+
+    .nav-social{
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1050px){
+    #header{
+        padding: 0 2vw;
+        justify-content: space-between;
+        height: 70px !important;
+    }
+
+    .nav-logo{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+
+    .nav-bars-btn, .nav-search{
+        display: flex;
+        font-size: 24px;
+        color: white;
+        border: none;
+        background-color: var(--primary);
+    }
+
+    .nav-menu, .nav-social{
+        display: none;
+    }
+
+    .nav-logo img{
+        height: 55px !important;
+    }
+}
+
+/* Overlay: Lớp mờ nền khi sidebar hiển thị */
+.nav-overlay {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
-    display: none;
 }
 
-.nav-mobile{
+/* Sidebar: Ẩn bên trái màn hình, xuất hiện khi mở */
+.nav-mobile {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
+    left: -320px; /* Ẩn ngoài màn hình */
     width: 320px;
     max-width: 100%;
     background-color: #fff;
-    transform: translateX(100%);
-    transition: transform linear 0.2s;
-    z-index: 2;
+    transition: transform 0.3s ease;
+    z-index: 3;
 }
 
-.nav-mobile-menu{
-    margin-top: 70px;
+.nav-mobile.active {
+    transform: translateX(320px); /* Trượt vào màn hình */
 }
 
-.nav-mobile-menu:first-child{
-    border-top: 1px solid var(--primary);
-}
-
-.nav-mobile-menu li a{
-    display: block;
-    color: var(--primary); /* Màu chữ trắng cho các liên kết trong menu */
-    text-decoration: none; /* Loại bỏ gạch chân mặc định của các liên kết */
-    font-weight: bold; /* Làm đậm chữ của các liên kết trong menu */
-    padding: 15px 0;
-    font-size: 1rem;
-}
-
-.nav-mobile-close{
-    font-size: 1.5rem;
-    color: #666;
+.nav-mobile-close {
+    font-size: 4.5rem;
+    color: black;
     position: absolute;
-    top: 1rem;
+    font-weight: 70;
+    top: -30px;
     right: 1rem;
+    cursor: pointer;
 }
 
-.break-line-mobile{
-    position: absolute;
-    width: 100%;
-    margin-top: 60px;
-    border: 1px solid var(--primary);
+.nav-mobile-menu {
+    margin-top: 70px;
+    list-style: none;
 }
 
-.nav-input{
-    display: none;
+.nav-mobile-menu li {
+    padding: 10px 0;
 }
 
-.nav-input:checked ~ .nav-overlay{
+.nav-mobile-menu li a {
     display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
 }
 
-.nav-input:checked ~ .nav-mobile{
-    transform: translateX(0%);
+.social-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 40px auto;
 }
+
+.social-icon-mobile {
+    font-size: 18px; /* Kích thước biểu tượng */
+    color: #000; /* Màu của biểu tượng */
+    text-decoration: none; /* Loại bỏ gạch chân của link */
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Tạo bóng cho biểu tượng */
+}
+
+.social-lang {
+    font-size: 1.1rem; /* Kích thước chữ của ngôn ngữ */
+    color: #000; /* Màu chữ */
+    text-decoration: none; /* Loại bỏ gạch chân của link */
+    font-weight: 200; /* Làm đậm chữ */
+}
+
+.social-lang.active {
+    font-weight: 600; /* Màu chữ của ngôn ngữ đang active */
+}
+
 /* end Header */
 
 
@@ -203,6 +304,7 @@ html, body {
 /* Slider */
 #slider {
     position: relative;
+    margin-top: 127px;
     padding-top: 21%;
     background-image: url(/assets/images/shutterstock.svg);
     background-repeat: no-repeat;
@@ -221,55 +323,133 @@ html, body {
     font-size: 35px;
     font-weight: bold; /* Làm chữ đậm */
 }
+
+@media (max-width: 1440px){
+    #slider{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 1050px){
+    #slider{
+        margin-top: 70px;
+    }
+}
 /* end Slider */
 
 /* Tabs */
 
 #tabs{
     height: 100px;
-    max-width: 76%;
-    margin: 88px auto 70px ;
-
+    max-width: 1520px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 70px auto 80px ;
 }
 
 .nav-tabs{
     justify-content: center;
+    flex-flow: row wrap;
+    border-bottom: 0.5px solid black;
 }
 
-.nav-link{
-    width: 292px;
-    height: 100px;
-    display: flex;
-    justify-content: center;  /* Căn giữa theo chiều ngang */
-    align-items: center;      /* Căn giữa theo chiều dọc */
+.nav-item {
+    width: 20%;
+    text-align: center;
+    padding: 36px 10px;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-tabs .nav-link {
     color:#1B332E;
+    font-size: 20px;
     font-weight: 400;
     line-height: 26px;
     border: none; /* Tắt đường viền */
     outline: none; /* Tắt đường viền khi được focus */
 }
 
-.nav-tabs .nav-link.active {
-    font-size: 20px;
+.nav-tabs .nav-item.active a{
     font-weight: 700;
-    border-bottom: 3px solid var(--primary)
 }
 
-.tab-pane {
-    display: none; /* Ẩn tất cả các tab mặc định */
+.nav-tabs .nav-item.active {
+    border-bottom: 4px solid var(--primary)
 }
 
-.tab-pane.active {
-    display: block; /* Hiển thị tab đang hoạt động */
+.nav-arrow-right {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 15px;
+    display: none;
 }
 
-#tab-content {
-    height: auto;
+.nav-arrow-left {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 15px;
+    display: none;
+    display: none;
 }
+
+.nav-arrow-right:hover, .nav-arrow-left:hover {
+    color: var(--primary); /* Đảm bảo màu không thay đổi khi hover */
+}
+
+
+@media (max-width: 1440px){
+
+    .nav-item{
+        width: 25%;   
+    }
+    .nav-tabs .nav-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1050px){
+    #tabs{
+     width: 94%;
+     padding: 0 20px;
+     margin: 0 auto 40px;
+    }
+
+    .nav-tabs{
+        border: none;
+    }
+
+    .nav-item.active{
+        width: 85%;
+        height: 80px; 
+        padding: 27px 5px;
+    }
+
+    .nav-item{
+        display: none;
+    }
+
+    .nav-tabs .nav-item.active{
+        display: block;
+        border-bottom: 3px solid var(--primary)
+    }
+
+    .nav-item.active .nav-link{ 
+        font-size: 13px;
+    }
+
+    .nav-item.active .nav-arrow-right{
+        display: block;
+    }
+
+}
+
 /* end Tabs */
 
 
@@ -300,38 +480,7 @@ html, body {
 /* end button scrollToTop */
 
 /* Responsive*/
-@media (max-width: 1675px) {
-    
-    /* Header */
-    #header .nav-bars-btn{
-        display: block;
-    }
 
-    .nav-menu{
-        display: none;
-    }
-
-    /* Tabs */
-    #tabs{
-        width: 100%;
-    }
-
-    .nav-tabs .nav-link{
-        display: none;
-    }
-    
-    .nav-tabs{
-        display: flex;
-        justify-content: center;
-    }
-
-    .nav-tabs .nav-link.active{
-        display: flex;
-        text-align: center;
-        margin: auto;
-    }
-
-}
 
 
 /* Footer */
@@ -475,36 +624,5 @@ html, body {
 }
 
 
-@media (max-width: 1675px) {
-    
-    /* Header */
-    #header .nav-bars-btn{
-        display: block;
-    }
 
-    .nav-menu{
-        display: none;
-    }
-
-    /* Tabs */
-    #tabs{
-        width: 100%;
-    }
-
-    .nav-tabs .nav-link{
-        display: none;
-    }
-    
-    .nav-tabs{
-        display: flex;
-        justify-content: center;
-    }
-
-    .nav-tabs .nav-link.active{
-        display: flex;
-        text-align: center;
-        margin: auto;
-    }
-
-}
 

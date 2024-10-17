@@ -24,12 +24,6 @@
             
             <!-- Header -->
             <x-header />
-
-            <!-- Tabs -->
-            {{-- <div id="tab-container"></div>
-            
-            <div id="news-detail-container" style="display:none;"></div> --}}
-
             
              @yield('content')
             

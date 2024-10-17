@@ -25,3 +25,7 @@ Route::get('/newsProject', function () {
 Route::get('/notificationPage', function () {
     return view('notificationPage');
 });
+
+Route::get('/event', function () {
+    return view('event');
+});

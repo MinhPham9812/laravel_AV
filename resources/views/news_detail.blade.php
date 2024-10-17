@@ -1,8 +1,8 @@
 @extends('layouts.tab_news')
 
-@section('title', 'Tin Tức')
+@section('title', 'Chi tiết Tin Tức')
 
-@section('tab_content')
+@section('news-detail')
             
             <div class="slider-news-detail">
                 <div id="content">
