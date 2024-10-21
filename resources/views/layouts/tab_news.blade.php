@@ -5,20 +5,20 @@
   <ul class="nav nav-tabs"> 
       <li class="nav-item {{ Request::is('news') ? 'active' : '' }}">
           <a class="nav-link" id="news-link" href="{{ url('/news')}}">Tin Aking Village</a>
-          <a class="nav-arrow-right fa-solid fa-chevron-right"></a>  <!-- Mũi tên phải -->
+          <a class="nav-arrow-right fa-solid fa-chevron-right" href="{{ url('/newsProject')}}"></a>  <!-- Mũi tên phải -->
       </li>
       <li class="nav-item {{ Request::is('newsProject') ? 'active' : '' }}">
-          <i class="nav-arrow-left fa-solid fa-chevron-left"></i> <!-- Mũi tên trái -->
+          <a class="nav-arrow-left fa-solid fa-chevron-left"  href="{{ url('/news')}}"></a> <!-- Mũi tên trái -->
           <a class="nav-link" id="newsProject-link" href="{{ url('/newsProject')}}">Tin dự án</a>
-          <i class="nav-arrow-right fa-solid fa-chevron-right"></i> <!-- Mũi tên phải -->
+          <a class="nav-arrow-right fa-solid fa-chevron-right" href="{{ url('/notificationPage')}}"></a> <!-- Mũi tên phải -->
       </li>
       <li class="nav-item {{ Request::is('notificationPage') ? 'active' : '' }}">
-          <i class="nav-arrow-left fa-solid fa-chevron-left"></i> <!-- Mũi tên trái -->
+          <a class="nav-arrow-left fa-solid fa-chevron-left" href="{{ url('/newsProject')}}"></a> <!-- Mũi tên trái -->
           <a class="nav-link" id="notificationPage-link" href="{{ url('/notificationPage')}}">Thông báo</a>
-          <i class="nav-arrow-right fa-solid fa-chevron-right"></i> <!-- Mũi tên phải -->
+          <a class="nav-arrow-right fa-solid fa-chevron-right" href="{{ url('/event')}}"></a> <!-- Mũi tên phải -->
       </li>
       <li class="nav-item {{ Request::is('event') ? 'active' : '' }}">
-        <i class="nav-arrow-left fa-solid fa-chevron-left"></i> <!-- Mũi tên trái -->
+        <a class="nav-arrow-left fa-solid fa-chevron-left" href="{{ url('/notificationPage')}}"></a> <!-- Mũi tên trái -->
         <a class="nav-link" href="{{ url('/event')}}">Sự kiện</a>
     </li>
   </ul>

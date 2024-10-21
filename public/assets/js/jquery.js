@@ -1,13 +1,35 @@
 $(document).ready(function() {
-    // Đặt đoạn mã xử lý scroll sau khi header được load xong
-    var lastScrollTop = 0;
-    var header = $('#header');
-    var logo = $('.nav-logo img');
-    var headerHeightInitial = 127; // Chiều cao ban đầu của header khi ở trên cùng
-    var headerHeightSmall = 70;    // Chiều cao nhỏ khi lăn chuột lên
-    var logoHeightInitial = 70;    // Chiều cao ban đầu của logo
-    var logoHeightSmall = 55;      // Chiều cao nhỏ của logo khi lăn chuột lên
+    var header = $('.header');
+    var logo = $('.header__logo-img');
+    
+    // Các giá trị chiều cao
+    var headerHeightInitial = 127; 
+    var headerHeightSmall = 70;    
+    var logoHeightInitial = 70;    
+    var logoHeightSmall = 55;      
+    
+    // Điều chỉnh chiều cao header theo kích thước màn hình
+    function adjustHeaderHeight() {
+        var windowWidth = $(window).width();
+        
+        if (windowWidth <= 1050) {
+            header.css('height', headerHeightSmall + 'px');
+            logo.css('height', logoHeightSmall + 'px');
+        } else if (windowWidth <= 1440) {
+            header.css('height', '100px');
+            logo.css('height', logoHeightInitial + 'px');
+        } else {
+            header.css('height', headerHeightInitial + 'px');
+            logo.css('height', logoHeightInitial + 'px');
+        }
+    }
 
+    // Gọi hàm điều chỉnh chiều cao khi tải lại trang và khi thay đổi kích thước trang
+    adjustHeaderHeight();
+    $(window).resize(adjustHeaderHeight);
+
+    // Xử lý cuộn trang
+    var lastScrollTop = 0;
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop();
 
@@ -20,77 +42,29 @@ $(document).ready(function() {
                 'top': '0',
                 'height': headerHeightSmall + 'px'
             });
-            logo.css('height', logoHeightSmall + 'px'); // Thu nhỏ logo khi header nh
+            logo.css('height', logoHeightSmall + 'px');
         }
 
         // Khi cuộn đến trên cùng của trang, trả lại chiều cao ban đầu của header
         if (scrollTop === 0) {
-            header.css('height', headerHeightInitial + 'px');
-            logo.css('height', logoHeightInitial + 'px'); // Đưa logo về chiều cao ban đầu
+            adjustHeaderHeight();
         }
 
         lastScrollTop = scrollTop; // Cập nhật vị trí cuộn hiện tại
     });
 
     // Mở sidebar khi nhấn nút nav-bars-btn
-    $('.nav-bars-btn').click(function() {
-        $('.nav-mobile').addClass('active');
-        $('.nav-overlay').fadeIn();
+    $('.header__bars-btn').click(function() {
+        $('.header__mobile').addClass('active');
+        $('.header__overlay').fadeIn();
     });
 
     // Đóng sidebar khi nhấn vào nút close hoặc overlay
-    $('.nav-mobile-close, .nav-overlay').click(function() {
-        $('.nav-mobile').removeClass('active');
-        $('.nav-overlay').fadeOut();
+    $('.header__mobile-close, .header__overlay').click(function() {
+        $('.header__mobile').removeClass('active');
+        $('.header__overlay').fadeOut();
     });
 
-
-    // Load tabs và gắn sự kiện sau khi tải xong
-    // $("#tab-container").load("/tabs", function(response, status, xhr) {
-    //     if (status == "error") {
-    //         console.log("Error loading tabs: " + xhr.status + " " + xhr.statusText);
-    //     } else {
-    //         console.log("Tabs loaded successfully");
-    //     }
-
-    //     // Khởi tạo Swiper sau khi slider-news-container được load
-    //     $("#slider-news-container").load("/news", function() {
-    //         const swiper = new Swiper('.swiper', {
-    //             direction: 'horizontal',
-    //             loop: true,
-    //             pagination: {
-    //                 el: '.swiper-pagination',
-    //                 clickable: true,
-    //             },
-    //         });
-
-    //         // Xử lý chuyển sang trang news_detail
-    //         $('#slider-news-container').on('click', '.larg-news-item img, .small-news-grid img', function(event) {
-    //             event.preventDefault();
-    //             $("#tab-content").hide();
-    //             $("#news-detail-container").show().load("/news-detail");
-    //         });
-    //     });
-
-    //     // Gắn sự kiện click cho các tab
-    //     $('#tabs a').on('click', function(event) {
-    //         event.preventDefault();
-    //         $('#tabs a').removeClass('active');
-    //         $(this).addClass('active');
-    //         $('.tab-pane').removeClass('active');
-
-    //         let tabId = $(this).attr('id');
-    //         console.log('Tab clicked: ' + tabId);
-
-    //         if (tabId === 'news-link') {
-    //             $('#news').addClass('active');
-    //         } else if (tabId === 'newsProject-link') {
-    //             $('#newsProject').load('/newsProject').addClass('active');
-    //         } else if (tabId === 'notificationPage-link') {
-    //             $('#notificationPage').load('/notificationPage').addClass('active');
-    //         }
-    //     });
-    // });
 
      
 

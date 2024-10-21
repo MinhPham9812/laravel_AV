@@ -3,57 +3,56 @@
 @section('title', 'Tin Tức')
 <!-- Content -->
 @section('tin-aking')
-<div id="slider-news-container" class="slider-news">
-    <div id="content">
-        <div class="row">
-            <!-- column 1 -->
-                <div class="col-xxl larg-news-item">
+<div id="news" class="news">
+    <div class="news__container">
+        <!-- Large news item -->
+        
+            <a class="news__large-item" href="{{ url('/news-detail') }}">
+                <div class="news__overlay">
+                    <p class="news__date">11/5/2022</p>
+                    <h2 class="news__title">AKING VILLAGE KHẲNG ĐỊNH UY TÍN TỪ NHỮNG DỰ ÁN BÀN GIAO ĐÚNG TIẾN ĐỘ</h2>
+                    <p class="news__desc">20 năm thực hiện tôn chỉ “Nơi đặt niềm tin, Nơi xây tổ ấm”, hoạt động kinh doanh dựa trên nền tảng giá trị cốt lõi: pháp lý vững chắc, thông tin minh bạch, sản phẩm chất lượng và dịch vụ tận tâm, AKING VILLAGE đang khẳng định tầm vóc của một thương hiệu Việt...</p>
+                </div>
+            </a>
+        
+            
+        <!-- Small news items -->
+            <div class="news__small-grid">
+                <div class="news__small-item">
                     <a href="{{ url('/news-detail') }}">
-                    <img src="assets/images/Rectangle1.svg" alt="">
-                    <div class="overlay-text">
-                        <i>11/5/2022</i>
-                        <h4>AKING VILLAGE KHẲNG ĐỊNH UY TÍN TỪ NHỮNG DỰ ÁN BÀN GIAO ĐÚNG TIẾN ĐỘ</h4>
-                        <p>20 năm thực hiện tôn chỉ “Nơi đặt niềm tin, Nơi xây tổ ấm”, hoạt động kinh doanh dựa trên nền tảng giá trị cốt lõi: pháp lý vững chắc, thông tin minh bạch, sản phẩm chất lượng và dịch vụ tận tâm, AKI VILLAGE đang khẳng định tầm vóc của một thương hiệu Việt...</p>
-                    </div>
+                        <img src="assets/images/Rectangle2.svg" alt="news image">
+                        <div class="news__overlay">
+                        <p class="news__date">11/5/2022</p>
+                        <h2 class="news__desc-t">NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h2>
+                        </div>
                     </a>
                 </div>
-
-            <!-- column 2 -->
-                <div class="col-xl small-news-grid">
-                    <!-- column 2, row 1 -->
-                    <div class="row custom-row-spacing-1">
-                        <div class="col">
-                            <img src="assets/images/Rectangle2.svg" alt="">
-                            <div class="overlay-text">
-                                <i>11/5/2022</i>
-                                <h4>NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h4>
-                            </div>
+                <div class="news__small-item">
+                    <a href="{{ url('/news-detail') }}">
+                        <img src="assets/images/Rectangle3.svg" alt="news image">
+                        <div class="news__overlay">
+                        <p class="news__date">11/5/2022</p>
+                        <h2 class="news__desc-t">NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h2>
                         </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle3.svg" alt="">
-                            <div class="overlay-text">
-                                <i>11/5/2022</i>
-                                <h4>NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h4>
-                            </div>
+                    </a>
+                </div>
+                <div class="news__small-item">
+                    <a href="{{ url('/news-detail') }}">
+                        <img src="assets/images/Rectangle4.svg" alt="news image">
+                        <div class="news__overlay">
+                        <p class="news__date">11/5/2022</p>
+                        <h2 class="news__desc-t">NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h2>
                         </div>
-                    </div>
-                    <!-- column 2, row 2 -->
-                    <div class="row custom-row-spacing-2">
-                        <div class="col">
-                            <img src="assets/images/Rectangle4.svg" alt="">
-                            <div class="overlay-text">
-                                <i>11/5/2022</i>
-                                <h4>NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h4>
-                            </div>
+                    </a>
+                </div>
+                <div class="news__small-item">
+                    <a href="{{ url('/news-detail') }}">
+                        <img src="assets/images/Rectangle5.svg" alt="news image">
+                        <div class="news__overlay">
+                        <p class="news__date">11/5/2022</p>
+                        <h2 class="news__desc-t">NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h2>
                         </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle5.svg" alt="">
-                            <div class="overlay-text">
-                                <i>11/5/2022</i>
-                                <h4>NGÀY 11.5.2022: AKING VILLAGE TỔ CHỨC SỰ KIỆN TRI ÂN KHÁCH HÀNG</h4>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
     </div>

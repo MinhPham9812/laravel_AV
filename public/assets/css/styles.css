@@ -18,44 +18,46 @@ html, body {
 }
 
 /* Header */
-#header {
+/* Block: header */
+.header {
     position: fixed;
+    top: 0;
     width: 100%;
     height: 127px;
-    background-color: var(--primary); /* Your green background color */
+    background-color: var(--primary);
     display: flex;
-    align-items: center; /* Vertically center the items */
+    align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    transition: all 0.6s ease; /* Chuyển đổi hiệu ứng khi header di chuyển */
-    z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
+    transition: all 0.6s ease;
+    z-index: 1000;
 }
 
-
 /* Logo */
-.nav-logo {
-    display: flex; /* Flexbox for horizontal alignment */
+.header__logo {
+    display: flex;
     align-items: center;
-    gap: 5px; /* Space between logo and text */
-    flex-shrink: 0; /* Logo sẽ không co lại */
-    min-width: 150px; /* Đặt chiều rộng tối thiểu để logo không bị nhỏ lại */
+    gap: 5px;
+    flex-shrink: 0;
+    min-width: 150px;
     transition: all 0.6s ease;
     padding: 0 30px;
     margin-right: 30px;
 }
 
-.nav-logo img {
-    height: 70px; /* Logo height as in the original */
+.header__logo-img {
+    height: 70px;
 }
 
 /* Logo text */
-.logo-text {
+.header__logo-text {
     display: flex;
-    flex-direction: column; /* Vertically stack the text */
+    flex-direction: column;
     align-items: flex-start;
 }
 
-.logo-text-aking, .logo-text-village {
+.header__logo-text--aking, 
+.header__logo-text--village {
     font-size: 12px;
     font-family: "Barlow";
     color: #ffffff;
@@ -63,141 +65,132 @@ html, body {
 }
 
 /* Navigation menu */
-.nav-menu {
-    display: flex; /* Flexbox for horizontal menu */
-    justify-content: space-evenly; /* Center the menu */
+.header__menu {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 3.5vw; /* Space between menu items */
-    list-style: none; /* Remove bullets */
+    gap: 3.5vw;
+    list-style: none;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
 }
 
-.nav-menu li a {
+.header__menu-item a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    white-space: nowrap; /* Prevent text from wrapping */
-    position: relative; /* Để dùng pseudo-element */
+    white-space: nowrap;
+    position: relative;
 }
 
-/* Hover effect for menu items */
-.nav-menu li a:hover {
+.header__menu-item a:hover {
+    opacity: 0.9;
+}
+
+.header__logo:hover, .header__social-icon:hover,
+.header__social-lang--vi:hover, .header__social-lang--en:hover {
     opacity: 0.8;
 }
 
-.nav-logo:hover, .social-icon:hover
-, .social-lang.vi:hover, .social-lang.en:hover {
-    opacity: 0.8; /* Làm mờ logo */
+/* Border-bottom animation */
+.header__menu-item a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
-
-/* 
-Border-bottom animation:
-Tạo đường kẻ (border-bottom) ảo bằng cách sử dụng pseudo-element ::before.
-Ban đầu đường kẻ có width 0 (nên không hiển thị), và được đặt phía dưới chữ. 
-*/
-.nav-menu li a::before {
-    content: ""; /* Tạo phần tử giả, không có nội dung */
-    position: absolute; /* Đặt vị trí tuyệt đối so với phần tử cha */
-    width: 0; /* Đường kẻ ban đầu có chiều rộng bằng 0 */
-    height: 2px; /* Độ dày của đường kẻ */
-    bottom: -2px; /* Đặt đường kẻ cách text 2px ở phía dưới */
-    left: 0; /* Đường kẻ bắt đầu từ phía bên trái */
-    background-color: #fff; /* Màu sắc của đường kẻ là trắng */
-    transition: all 0.3s ease-in-out; /* Hiệu ứng mượt khi mở rộng width */
-}
-
-/* 
-Hover effect for border-bottom:
-Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visible) và mở rộng chiều rộng từ 0% đến 100%.
-*/
-.nav-menu li a:hover::before {
-    width: 100%; /* Mở rộng đường kẻ từ 0% lên 100% */
+.header__menu-item a:hover::before {
+    width: 100%;
 }
 
 /* Social icons and language */
-.nav-social {
-    display: flex; /* Flexbox to arrange the items */
+.header__social {
+    display: flex;
     align-items: center;
-    gap: 20px; /* Space between the social icons and language switch */
-    flex-shrink: 0; /* Logo sẽ không co lại */
-    min-width: 150px; /* Đặt chiều rộng tối thiểu để logo không bị nhỏ lại */
+    gap: 20px;
+    flex-shrink: 0;
+    min-width: 150px;
     margin-left: 77px;
     font-size: 16px;
     transition: opacity 0.3s ease;
 }
 
-.nav-social a {
+.header__social a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
 }
 
-.social-icon {
-    font-weight: bold; /* Làm đậm chữ của biểu tượng mạng xã hội (ví dụ như Facebook "f") */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Tạo bóng với màu đen và độ mờ */
+.header__social-icon {
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.social-lang.vi {
-    font-weight: bold; /* Làm đậm chữ "VI" */
-    padding-right: 8px; /* Thêm khoảng cách giữa chữ "VI" và đường phân cách (|) */
-    position: relative; /* Định vị tương đối để sử dụng pseudo-element (::after) */
+.header__social-lang--vi {
+    font-weight: bold;
+    padding-right: 8px;
+    position: relative;
 }
 
-.social-lang.vi::after {
-    content: ''; /* Thêm nội dung giả (dấu phân cách |) sau chữ "VI" */
-    position: absolute; /* Định vị tuyệt đối cho đường phân cách */
-    right: 0; /* Đặt đường phân cách ở phía bên phải của chữ "VI" */
-    top: 2px; /* Đặt vị trí của đường phân cách từ trên xuống */
-    bottom: 0; /* Đường phân cách sẽ chạy từ đầu tới đáy của phần tử */
-    width: 1px; /* Độ rộng của đường phân cách */
-    height: 16px; /* Đặt chiều cao cố định của đường phân cách */
-    background-color: #fff; /* Màu của đường phân cách là màu trắng */
-    margin-left: 5px; /* Tạo khoảng cách giữa đường phân cách và chữ "EN" */
+.header__social-lang--vi::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 2px;
+    bottom: 0;
+    width: 1px;
+    height: 16px;
+    background-color: #fff;
+    margin-left: 5px;
 }
 
-.nav-bars-btn{
+/* Sidebar button */
+.header__bars-btn {
     display: none;
 }
 
-.nav-search{
+.header__search {
     display: none;
 }
 
-@media (max-width: 1440px){
-    #header{
-        height: 100px !important;
+@media (max-width: 1440px) {
+    .header {
+        height: 100px ;
         padding: 0 6vw;
     }
 
-    .nav-menu{
+    .header__menu {
         font-size: 13px;
         gap: 2.5vw;
     }
 
-    .nav-social{
+    .header__social {
         margin-left: 30px;
     }
 }
 
-@media (max-width: 1050px){
-    #header{
+@media (max-width: 1050px) {
+    .header {
         padding: 0 2vw;
         justify-content: space-between;
-        height: 70px !important;
+        height: 70px ;
     }
 
-    .nav-logo{
+    .header__logo {
         position: absolute;
         left: 50%;
         top: 10%;
         transform: translateX(-50%);
     }
 
-    .nav-bars-btn, .nav-search{
+    .header__bars-btn, .header__search {
         display: flex;
         font-size: 24px;
         color: white;
@@ -205,17 +198,17 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
         background-color: var(--primary);
     }
 
-    .nav-menu, .nav-social{
+    .header__menu, .header__social {
         display: none;
     }
 
-    .nav-logo img{
-        height: 55px !important;
+    .header__logo-img {
+        height: 55px;
     }
 }
 
-/* Overlay: Lớp mờ nền khi sidebar hiển thị */
-.nav-overlay {
+/* Overlay */
+.header__overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -226,12 +219,12 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
     z-index: 2;
 }
 
-/* Sidebar: Ẩn bên trái màn hình, xuất hiện khi mở */
-.nav-mobile {
+/* Sidebar */
+.header__mobile {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -320px; /* Ẩn ngoài màn hình */
+    left: -320px;
     width: 320px;
     max-width: 100%;
     background-color: #fff;
@@ -239,11 +232,11 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
     z-index: 3;
 }
 
-.nav-mobile.active {
-    transform: translateX(320px); /* Trượt vào màn hình */
+.header__mobile.active {
+    transform: translateX(320px);
 }
 
-.nav-mobile-close {
+.header__mobile-close {
     font-size: 4.5rem;
     color: black;
     position: absolute;
@@ -253,16 +246,16 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
     cursor: pointer;
 }
 
-.nav-mobile-menu {
+.header__mobile-menu {
     margin-top: 70px;
     list-style: none;
 }
 
-.nav-mobile-menu li {
+.header__mobile-menu-item {
     padding: 10px 0;
 }
 
-.nav-mobile-menu li a {
+.header__mobile-menu-item a {
     display: block;
     color: black;
     text-decoration: none;
@@ -270,7 +263,7 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
     font-size: 16px;
 }
 
-.social-mobile{
+.header__mobile-social {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,23 +271,23 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
     margin: 40px auto;
 }
 
-.social-icon-mobile {
-    font-size: 18px; /* Kích thước biểu tượng */
-    color: #000; /* Màu của biểu tượng */
-    text-decoration: none; /* Loại bỏ gạch chân của link */
+.header__mobile-social-icon {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
     font-weight: 600;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Tạo bóng cho biểu tượng */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.social-lang {
-    font-size: 1.1rem; /* Kích thước chữ của ngôn ngữ */
-    color: #000; /* Màu chữ */
-    text-decoration: none; /* Loại bỏ gạch chân của link */
-    font-weight: 200; /* Làm đậm chữ */
+.header__mobile-lang {
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 200;
 }
 
-.social-lang.active {
-    font-weight: 600; /* Màu chữ của ngôn ngữ đang active */
+.header__mobile-lang--active {
+    font-weight: 600;
 }
 
 /* end Header */
@@ -378,6 +371,25 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
     border-bottom: 4px solid var(--primary)
 }
 
+.nav-tabs .nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-tabs .nav-item:hover::before{
+    width: 100%;
+}
+
+.nav-tabs .nav-item.active::before {
+    display: none; /* Ẩn pseudo-element khi tab đang active */
+}
+
 .nav-arrow-right {
     position: absolute;
     right: -20px;
@@ -406,11 +418,24 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
 
 @media (max-width: 1440px){
 
+    #tabs{
+        margin: 40px auto 80px;
+    }
+
     .nav-item{
         width: 25%;   
     }
     .nav-tabs .nav-link {
         font-size: 16px;
+    }
+
+    .nav-tabs .nav-item.active{
+        display: block;
+        border-bottom: 3px solid var(--primary)
+    }
+
+    .nav-tabs .nav-item::before {
+        height: 3px;
     }
 }
 
@@ -448,6 +473,9 @@ Khi hover vào liên kết, đường kẻ sẽ xuất hiện (visibility: visib
         display: block;
     }
 
+    .nav-item.active .nav-arrow-left{
+        display: block;
+    }
 }
 
 /* end Tabs */
