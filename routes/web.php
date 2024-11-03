@@ -3,29 +3,29 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('layouts.master');
-});
-
-Route::get('/tabs', function () {
-    return view('tabs');
+    return view('home');
 });
 
 Route::get('/news', function () {
-    return view('news');
+    return view('news.index'); // Thay đổi đường dẫn
 });
 
 Route::get('/news-detail', function () {
-    return view('news_detail');
+    return view('news.detail'); // Thay đổi đường dẫn
 });
 
 Route::get('/newsProject', function () {
-    return view('newsProject');
+    return view('news.project'); // Thay đổi đường dẫn
 });
 
 Route::get('/notificationPage', function () {
-    return view('notificationPage');
+    return view('news.notification'); // Thay đổi đường dẫn
 });
 
 Route::get('/event', function () {
-    return view('event');
+    return view('news.event'); // Thay đổi đường dẫn
+});
+
+Route::get('/aking-general', function () {
+    return view('akingVillage.aking-general'); // Thay đổi đường dẫn
 });

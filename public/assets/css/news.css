@@ -149,18 +149,17 @@
     .news__small-item {
         display: flex; /* Sử dụng flex để đặt hình ảnh và văn bản bên cạnh nhau */  
         width: 100%;
-    }
+        margin-bottom: 20px;
+    }   
 
     .news__small-item img{
         height: auto;
-        width: 50%;
-        margin-bottom: 20px;
     }
 
     .news__small-item .news__overlay {
         position: relative; /* Thay đổi vị trí để văn bản không còn nằm trên hình ảnh */
-        width: 50%;
         color: #000; /* Đổi màu chữ thành màu đen */
+        width: 50%;
         background: none; /* Loại bỏ nền overlay */
     }
 }

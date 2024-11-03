@@ -1,0 +1,155 @@
+/* Tabs */
+
+.tabs {
+    height: 100px;
+    margin: 70px 0 80px;
+}
+
+.tabs__list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    border-bottom: 0.5px solid black;
+    padding: 0;
+}
+
+.tabs--aking {
+    border-bottom: 0.5px solid black;
+}
+
+.tabs--aking .tabs__list {
+    border-bottom: none;
+}
+
+
+.tabs__item {
+    width: 20%;
+    text-align: center;
+    padding: 36px 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tabs__item .tabs__link {
+    color: #1B332E;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+}
+
+.tabs__item--active .tabs__link {
+    font-weight: 700;
+}
+
+.tabs__item--active {
+    border-bottom: 4px solid var(--primary);    
+}
+
+.tabs__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+.tabs__item:hover::before {
+    width: 100%;
+}
+
+.tabs__item--active::before {
+    display: none;
+}
+
+.tabs__arrow--right {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 15px;
+    display: none;
+}
+
+.tabs__arrow--left {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 15px;
+    display: none;
+}
+
+.tabs__arrow--right:hover,
+.tabs__arrow--left:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 1440px) {
+    .tabs {
+        margin: 40px auto 80px;
+    }
+
+    .tabs__item {
+        width: 25%;
+    }
+
+    .tabs__link {
+        font-size: 16px;
+    }
+
+    .tabs__item--active {
+        display: block;
+        border-bottom: 3px solid var(--primary);
+    }
+
+    .tabs__item::before {
+        height: 3px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .tabs {
+        width: 94%;
+        padding: 0 20px;
+        margin: 0 auto 40px;
+    }
+
+    .tabs__list {
+        border: none;
+    }
+
+    .tabs__item--active {
+        width: 85%;
+        height: 80px;
+        padding: 27px 5px;
+    }
+
+    .tabs__item {
+        display: none;
+    }
+
+    .tabs__item--active {
+        display: block;
+        border-bottom: 3px solid var(--primary);
+    }
+
+    .tabs__link {
+        font-size: 13px;
+    }
+
+    .tabs__arrow--right,
+    .tabs__arrow--left {
+        display: block;
+    }
+}
+
+
+/* end Tabs */

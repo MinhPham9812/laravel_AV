@@ -1,4 +1,3 @@
-<!-- Footer -->
 <div id="footer">
     <a href="{{ url('/') }}">
         <div id="nav-logo-footer">

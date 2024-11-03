@@ -1,0 +1,139 @@
+/* Intro section */
+.model__intro {
+    padding: 50px 0 90px;
+    background-color: #fffae9;
+    background-image: url("../images/bkModel.svg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: contain;
+}
+
+.model__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.model__content {
+    width: 60%;
+}
+
+.model__title {
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+}
+
+.model__subtitle {
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 28px;
+}
+
+.model__desc {
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.model__list {
+    list-style: none;
+    padding: 0;
+}
+
+.model__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 40px;
+    font-style: italic;
+}
+
+.model__item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: black;
+}
+
+.model__bullet {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    position: relative;
+}
+
+.model__bullet::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: -15px;
+    left: -15px;
+    background-color: rgba(139, 195, 74, 0.2);
+    border-radius: 50%;
+}
+
+.model__image {
+    width: 40%;
+    border-radius: 80px;
+    text-align: center;
+}
+
+.model__image img {
+    max-width: 100%;
+    height: 512px;
+    border-radius: 80px;
+}
+
+@media (max-width: 1024px) {
+    .model__wrapper {
+        flex-direction: column;
+    }
+
+    .model__content,
+    .model__image {
+        max-width: 100%;
+    }
+}
+
+/* Quote section */
+.model__quote {
+    text-align: center;
+    font-size: 32px;
+    font-style: italic;
+    color: #8bc34a;
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .model__intro {
+        flex-direction: column;
+    }
+
+    .model__title {
+        font-size: 32px;
+    }
+
+    .model__subtitle {
+        font-size: 20px;
+    }
+
+    .model__image {
+        max-width: 100%;
+    }
+
+    .model__quote {
+        font-size: 24px;
+        padding: 40px 0;
+    }
+}

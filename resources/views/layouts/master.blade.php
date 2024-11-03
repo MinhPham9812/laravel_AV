@@ -15,22 +15,32 @@
     <link rel="stylesheet" href="{{asset('assets/css/base.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/news.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/news_detail.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/aking_general.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+    
   </head>
   <body>
       
 
-        <div id="main">
-            
-            <!-- Header -->
-            <x-header />
-            
-             @yield('content')
-            
-            
-            <!-- Footer -->
-            <x-footer />
-        </div>
+  <div id="main">
+    <!-- Header -->
+    <x-header />
+    
+    <!-- Main Content -->
+    <main>
+        @if(Request::is('/'))
+            @yield('home')
+        @elseif(Request::is('aking-general*'))  {{-- Thêm * để bắt tất cả các route con của aking --}}
+            @yield('tab-aking')
+        @elseif(Request::is('news*') || Request::is('newsProject*') || Request::is('notificationPage*') || Request::is('event*'))
+            @yield('tab-news')
+        @endif
+    </main>
+
+    <!-- Footer -->
+    <x-footer />
+</div>
         
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
