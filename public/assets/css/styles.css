@@ -529,6 +529,10 @@ body {
         width: 94%;
     }
 
+    .tabs--aking {
+        margin-bottom: 0;
+    }
+
     .tabs__list::after {
         display: none;
     }
@@ -650,77 +654,3 @@ body {
 }
 
 /* end Footer */
-
-.swiper {
-    width: 100%;
-    padding-bottom: 15%;
-}
-
-/* Tùy chỉnh pagination */
-.swiper-pagination {
-    display: flex; /* Sử dụng Flexbox để sắp xếp các chấm ngang hàng */
-    justify-content: center; /* Căn giữa các chấm theo chiều ngang */
-    align-items: center; /* Căn giữa các chấm theo chiều dọc */
-    gap: 4vw; /* Khoảng cách giữa các chấm là 81px */
-    position: relative; /* Vị trí tương đối để có thể căn chỉnh chấm bên trong */
-    margin-top: 20px; /* Khoảng cách từ pagination đến nội dung bên trên */
-    --swiper-pagination-bottom: -10vh; /* Điều chỉnh vị trí của pagination xuống dưới so với nội dung swiper */
-    z-index: 1; /* Đảm bảo pagination nằm trên các thành phần khác */
-}
-
-/* Thêm đường nối giữa các chấm pagination */
-.swiper-pagination-bullet::before {
-    content: ""; /* Tạo một phần tử giả trước mỗi chấm để tạo đường nối */
-    position: absolute; /* Đặt đường nối theo vị trí tuyệt đối so với chấm */
-    top: 50%; /* Đặt đường nối ở giữa chiều cao của chấm */
-    left: 100%; /* Đặt đường nối bắt đầu từ mép bên phải của chấm */
-    width: 5vw; /* Độ dài của đường nối */
-    height: 0.5px; /* Độ dày của đường nối */
-    background-color: var(--primary); /* Màu sắc của đường nối */
-    transform: translateY(
-        50%
-    ); /* Dịch chuyển đường nối một chút để đảm bảo nó nằm chính giữa */
-    z-index: 0; /* Đảm bảo đường nối nằm sau chấm */
-}
-
-/* Tùy chỉnh cho chấm không active */
-.swiper-pagination-bullet {
-    width: 1.5vw; /* Đặt kích thước chấm không active là 17px */
-    height: 1.5vw;
-    background-color: var(--primary); /* Màu của chấm không active */
-    border-radius: 50%; /* Tạo hình tròn cho chấm */
-    opacity: 1; /* Độ trong suốt của chấm là 100% */
-    position: relative; /* Đặt vị trí tương đối để căn chỉnh phần tử con */
-    z-index: 1; /* Đảm bảo chấm nằm trên đường nối */
-}
-
-/* Tùy chỉnh cho chấm active (đang được chọn) */
-.swiper-pagination-bullet-active {
-    width: 1.5vw; /* Đặt kích thước của chấm active */
-    height: 1.5vw;
-    background-color: var(--primary); /* Màu của chấm active */
-    border-radius: 50%; /* Tạo hình tròn cho chấm active */
-    opacity: 1; /* Độ trong suốt cho chấm active */
-    position: relative; /* Đặt vị trí tương đối để căn chỉnh phần tử con */
-    z-index: 2; /* Đảm bảo chấm active nằm trên các phần tử khác */
-}
-
-/* Tạo chấm nhỏ ở giữa chấm active */
-.swiper-pagination-bullet-active::after {
-    content: ""; /* Tạo một phần tử giả sau chấm active */
-    width: 3.5vw; /* Kích thước của chấm nhỏ bên trong chấm active */
-    height: 3.5vw;
-    background-color: var(--primary); /* Màu của chấm nhỏ bên trong */
-    border-radius: 50%; /* Tạo hình tròn cho chấm nhỏ */
-    position: absolute; /* Đặt chấm nhỏ bên trong chấm active */
-    top: 50%;
-    left: 50%;
-    opacity: 0.3;
-    transform: translate(-50%, -50%); /* Căn giữa chấm nhỏ */
-    z-index: 2; /* Đảm bảo chấm nhỏ nằm trên các phần tử khác */
-}
-
-/* Loại bỏ đường nối từ chấm cuối */
-.swiper-pagination-bullet:last-child::before {
-    display: none; /* Ẩn đường nối cho chấm cuối cùng */
-}

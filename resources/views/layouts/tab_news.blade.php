@@ -43,7 +43,7 @@
           @yield('news-detail') <!-- Load nội dung chi tiết bài viết -->
       @elseif(Request::is('news'))
         <div class="tab-content__pane tab-content__pane--active" id="news">
-          <div class="swiper">
+          <div class="swiper swiper-base">
             <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                   <!-- Slider News -->
@@ -52,9 +52,15 @@
                   </div>
                   <!-- end Slider News -->
 
-                  <div class="swiper-slide">slider 2</div>
-                  <div class="swiper-slide">slider 3</div>
-                  <div class="swiper-slide">slider 4</div>
+                  <div class="swiper-slide">
+                    <div class="news">slider 2</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="news">slider 3</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="news">slider 4</div>
+                </div>
               </div>
                 <!-- Pagination -->
                     <div class="swiper-pagination"></div>

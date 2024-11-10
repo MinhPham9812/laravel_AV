@@ -1,0 +1,114 @@
+/* swiper-base.css */
+/* Base swiper styles */
+.swiper-base {
+    width: 100%;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.swiper-base .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw; /* Bỏ gap để các bullet liền nhau */
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 40px auto 0;
+}
+
+.swiper-base .swiper-pagination-bullet {
+    width: 17px;
+    height: 17px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    opacity: 1;
+    position: relative;
+}
+
+.swiper-base .swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 5vw;
+    height: 0.5px;
+    background-color: var(--primary);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.swiper-base .swiper-pagination-bullet-active {
+    width: 17px;
+    height: 17px;
+    background-color: var(--primary);
+}
+
+.swiper-base .swiper-pagination-bullet-active::after {
+    content: "";
+    width: 47px;
+    height: 47px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.3;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-base .swiper-pagination-bullet:last-child::before {
+    display: none;
+}
+
+/* Responsive */
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .swiper-base {
+        padding-bottom: 0;
+    }
+
+    .swiper-base .swiper-pagination {
+        gap: 100px;
+    }
+
+    .swiper-base .swiper-pagination-bullet::before {
+        width: 120px;
+    }
+
+    .swiper-base .swiper-pagination-bullet,
+    .swiper-base .swiper-pagination-bullet-active {
+        width: 17px;
+        height: 17px;
+    }
+
+    .swiper-base .swiper-pagination-bullet-active::after {
+        width: 47px;
+        height: 47px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .swiper-base {
+        padding-bottom: 0;
+    }
+
+    .swiper-base .swiper-pagination {
+        gap: 100px;
+    }
+
+    .swiper-base .swiper-pagination-bullet::before {
+        width: 120px;
+    }
+
+    .swiper-base .swiper-pagination-bullet,
+    .swiper-base .swiper-pagination-bullet-active {
+        width: 17px;
+        height: 17px;
+    }
+
+    .swiper-base .swiper-pagination-bullet-active::after {
+        width: 47px;
+        height: 47px;
+    }
+}

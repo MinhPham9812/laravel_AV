@@ -1,9 +1,29 @@
-/* Tin tức */
+@import "swiper_base.css";
+
+/* Tab content styles */
+.tab-content {
+    margin-bottom: 80px;
+}
+
+.tab-content__pane {
+    position: relative;
+}
+
+/* News styles */
 .news {
     margin: 0 auto;
     max-width: 1490px;
     width: 100%;
     padding: 0 15px;
+}
+
+/* Swiper specific styles cho trang news */
+.tab-content__pane .swiper {
+    margin-bottom: 40px;
+}
+
+.tab-content__pane .swiper-slide {
+    height: auto; /* Cho phép slide có chiều cao tự động */
 }
 
 .news__container {
@@ -18,16 +38,17 @@
     width: 750px;
     max-height: 450px;
     margin-bottom: 30px;
-    background-image: url('../images/Rectangle1.svg') !important; 
-    background-size: cover; 
-    background-position: center center; 
+    background-image: url("../images/Rectangle1.svg") !important;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    border-radius: 20px; 
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
     width: 100%;
 }
 
-.news__large-item, .news__small-grid{
+.news__large-item,
+.news__small-grid {
     width: 50%;
     padding: 0 15px;
 }
@@ -37,7 +58,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .news__small-grid {
@@ -59,7 +80,7 @@
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
-    transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .news__overlay {
@@ -94,26 +115,24 @@
     font-weight: 700;
 }
 
-
 /* Responsive */
 
 @media (max-width: 1440px) {
-    .news__large-item{
+    .news__large-item {
         height: 410px;
     }
 
-    .news__small-grid{
+    .news__small-grid {
         grid-auto-rows: 190px;
     }
 }
 
 @media (max-width: 1370px) {
-
-    .news__large-item{
+    .news__large-item {
         height: 380px;
     }
 
-    .news__small-grid{
+    .news__small-grid {
         grid-auto-rows: 175px;
     }
 
@@ -123,19 +142,29 @@
 }
 
 @media (max-width: 1200px) {
-
-    .news__large-item{
+    .news__large-item {
         height: 350px;
     }
 
-    .news__small-grid{
+    .news__small-grid {
         grid-auto-rows: 160px;
     }
 }
 
 @media (max-width: 1020px) {
+    /* Thêm styles cho news container */
+    .news__container {
+        flex-direction: column; /* Chuyển layout thành dạng cột */
+    }
 
-    .news__large-item{
+    /* Thêm styles cho large item và small grid */
+    .news__large-item,
+    .news__small-grid {
+        width: 100%;
+        padding: 0;
+    }
+
+    .news__large-item {
         height: 340px;
         width: 100%;
     }
@@ -143,24 +172,54 @@
     .news__small-grid {
         display: block;
         padding: 0;
-        width: 100%;
     }
 
     .news__small-item {
-        display: flex; /* Sử dụng flex để đặt hình ảnh và văn bản bên cạnh nhau */  
+        display: flex; /* Sử dụng flex để đặt hình ảnh và văn bản bên cạnh nhau */
         width: 100%;
         margin-bottom: 20px;
-    }   
+    }
 
-    .news__small-item img{
+    .news__small-item img {
         height: auto;
+        object-fit: cover;
     }
 
     .news__small-item .news__overlay {
-        position: relative; /* Thay đổi vị trí để văn bản không còn nằm trên hình ảnh */
+        position: static; /* Thay đổi vị trí để văn bản không còn nằm trên hình ảnh */
         color: #000; /* Đổi màu chữ thành màu đen */
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background: none; /* Loại bỏ nền overlay */
     }
 }
 
+/* Add these new styles for swiper */
+.tab-content {
+    overflow: visible !important;
+}
+
+.tab-content__pane {
+    overflow: visible !important;
+}
+
+.tab-content__pane .swiper {
+    overflow: visible !important;
+    padding-bottom: 60px;
+}
+
+.tab-content__pane .swiper-wrapper {
+    height: auto !important;
+}
+
+.tab-content__pane .swiper-slide {
+    height: auto !important;
+    visibility: visible !important; /* Đảm bảo slide luôn visible */
+}
+
+/* Điều chỉnh khoảng cách dưới cùng để tránh đè lên pagination */
+.news__container {
+    margin-bottom: 40px;
+}
