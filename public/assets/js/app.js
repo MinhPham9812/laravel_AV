@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true,
         speed: 1000,
         slidesPerView: 1,
+        autoHeight: true,
     };
 
     if (currentPath.includes("aking-general")) {
@@ -25,10 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Khởi tạo Swiper cho timeline content
         const contentSwiper = new Swiper(".timeline__content .swiper", {
             ...swiperConfig,
-            effect: "fade",
-            fadeEffect: {
-                crossFade: true,
-            },
             pagination: {
                 el: ".timeline__container .swiper-pagination",
                 clickable: true,

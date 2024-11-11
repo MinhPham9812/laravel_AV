@@ -94,10 +94,8 @@
     </div>
 
     <div class="model__features">
-        <!-- Background wrapper -->
-    <div class="features__background"></div>
-    
-        <div class="l-container">
+        
+            
             <div class="features__wrapper">
                 <!-- Feature card 1 -->
                 <div class="feature-item-container">
@@ -147,7 +145,8 @@
                 
                 <p>Tại Aking Village, các nhà đầu tư không chỉ có "nơi trú ẩn" tài sản an toàn với khả năng sinh lời ổn định qua năm tháng mà còn góp phần thúc đẩy giá trị nông sản Việt, mang lại lợi ích tốt đẹp cho bản thân, gia đình và xã hội. Với đội ngũ chuyên gia nông nghiệp giàu kinh nghiệm và các cố vấn tài chính uy tín, Aking Village luôn làm việc với tinh thần tâm huyết và cầu thị, không ngừng nỗ lực mang lại giá trị thật để xứng đáng với niềm tin của các đối tác và các nhà đầu tư đã tin tưởng chọn đồng hành cùng chúng tôi.</p>
             </div>
-        </div>
+            <!-- Background wrapper -->
+            <div class="features__background"></div>
     </div>
 
     <div class="model__timeline">
@@ -174,6 +173,9 @@
         
                 <!-- Right side - Content -->
                 <div class="timeline__content">
+                    <div class="content__image">
+                        <img src="assets/images/banner3.svg" alt="Timeline background">
+                    </div>
                     <!-- Content box with swiper -->
                     <div class="swiper swiper-base">
                         <div class="swiper-wrapper">

@@ -2,8 +2,20 @@
 /* Base swiper styles */
 .swiper-base {
     width: 100%;
+    height: auto;
     padding-bottom: 0;
     position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .swiper-base .swiper-pagination {
