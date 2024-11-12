@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 el: ".timeline__container .swiper-pagination",
                 clickable: true,
             },
+            observer: true,
+            observeParents: true,
         });
 
         // Đồng bộ keywords với slides
@@ -43,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             keywords.forEach((item, index) => {
                 item.classList.toggle("active", index === this.realIndex);
             });
+            contentSwiper.updateAutoHeight();
         });
 
         // Click event cho keywords

@@ -633,6 +633,8 @@
     width: 100%;
     border-radius: 80px;
     display: block;
+    position: relative;
+    z-index: 1;
 }
 /* Content box */
 .content__box {
@@ -760,9 +762,10 @@
 
     .content__box {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 10px;
         padding: 25px 20px 15px;
         border-radius: 30px;
+        background-color: black;
     }
 
     .content__list {
@@ -772,5 +775,15 @@
 
     .timeline__container .swiper-pagination {
         display: none;
+    }
+
+    .timeline__container .swiper-wrapper {
+        display: block;
+    }
+
+    .timeline__container .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
+        height: auto;
     }
 }

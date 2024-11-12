@@ -1,5 +1,10 @@
 /* swiper-base.css */
 /* Base swiper styles */
+.swiper {
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
 .swiper-base {
     width: 100%;
     height: auto;
@@ -7,15 +12,9 @@
     position: relative;
 }
 
-.swiper-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
 .swiper-slide {
     width: 100%;
     height: auto;
-    flex-shrink: 0;
 }
 
 .swiper-base .swiper-pagination {
