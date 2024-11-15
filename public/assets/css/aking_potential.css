@@ -1,0 +1,60 @@
+.potential__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.potential__title-highlight {
+    color: var(--primary);
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.potential__subtitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.stats {
+    padding: 0 46px 110px;
+    margin-top: 77px;
+}
+
+.potential .stats .c-row--top {
+    margin: 0 -10px 76px;
+}
+
+.potential .stats .c-row--top .c-row__col {
+    width: 20%;
+    padding: 0 10px;
+}
+
+.potential .stats .c-row--top .content-inner {
+    background: var(--primary);
+    border-radius: 80px;
+    height: 100%;
+    min-height: 349px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.potential .stats .c-row--top .content-inner p {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fef9e8;
+}
+
+.potential .stats .c-row--top .content-inner span {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+}

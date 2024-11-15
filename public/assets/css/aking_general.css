@@ -600,6 +600,7 @@
 .timeline__keywords {
     width: 35%;
     text-align: right;
+    padding-left: 50px;
 }
 
 .keyword__item {
@@ -618,33 +619,35 @@
 
 /* Content section */
 .timeline__content {
-    max-width: 940px;
-    width: 100%;
-    position: relative;
-}
-
-.content__image {
-    width: 100%;
-    position: relative;
-    z-index: 0;
+    width: 65%;
 }
 
 .content__image img {
     width: 100%;
     border-radius: 80px;
     display: block;
-    position: relative;
-    z-index: 1;
 }
+
+.timeline__container .swiper-base {
+    overflow: visible;
+}
+
+.timeline__container .swiper-slide {
+    opacity: 0;
+}
+
+/* Hiển thị slide đang hoạt động */
+.timeline__container .swiper-slide-active {
+    opacity: 1;
+}
+
 /* Content box */
 .content__box {
-    position: relative;
     border-radius: 80px;
     padding: 40px 52px 20px;
     max-width: 845px;
     margin: -90px auto 0;
     background-color: var(--primary);
-    z-index: 2;
 }
 
 .content__list {
@@ -680,7 +683,12 @@
 
 /* Pagination positioning */
 .timeline__container .swiper-base {
-    width: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline__container .swiper-wrapper {
+    position: relative;
     z-index: 1;
 }
 
@@ -689,8 +697,8 @@
     flex-direction: column;
     gap: 95px;
     position: relative;
-    padding-right: 90px;
-    margin-top: -10px;
+    padding-right: 80px;
+    margin: -10px 0 0;
 }
 
 .timeline__container .swiper-pagination-bullet::before {
@@ -705,11 +713,6 @@
 }
 
 @media screen and (max-width: 1366px) {
-    .timeline__content {
-        width: 700px;
-        height: 400px;
-    }
-
     .content__box {
         max-width: 720px;
 
@@ -765,7 +768,7 @@
         margin-top: 10px;
         padding: 25px 20px 15px;
         border-radius: 30px;
-        background-color: black;
+        background-color: var(--primary);
     }
 
     .content__list {
@@ -775,15 +778,5 @@
 
     .timeline__container .swiper-pagination {
         display: none;
-    }
-
-    .timeline__container .swiper-wrapper {
-        display: block;
-    }
-
-    .timeline__container .swiper,
-    .swiper-wrapper,
-    .swiper-slide {
-        height: auto;
     }
 }

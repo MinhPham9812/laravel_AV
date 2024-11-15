@@ -20,7 +20,7 @@
                 'arrow_right' => ''
             ],
             [
-                'route' => '',
+                'route' => 'aking-potential',
                 'label' => 'Tiềm năng BĐS nông nghiệp',
                 'arrow_left' => '',
                 'arrow_right' => ''
@@ -38,7 +38,7 @@
                 'arrow_right' => ''
             ],
             [
-                'route' => '',
+                'route' => '/',
                 'label' => 'Chủ đầu tư',
                 'arrow_left' => ''
             ]
@@ -50,7 +50,7 @@
         
         @if(Request::is('aking-general'))
             @yield('aking-general') 
-        @elseif(Request::is('aking-potential'))
+        @elseif(Request::is('aking-potential')) 
             @yield('aking-potential')          
         @endif
     </div>

@@ -29,3 +29,7 @@ Route::get('/event', function () {
 Route::get('/aking-general', function () {
     return view('akingVillage.aking-general'); // Thay đổi đường dẫn
 });
+
+Route::get('/aking-potential', function (){
+    return view('akingVillage.aking-potential');
+});

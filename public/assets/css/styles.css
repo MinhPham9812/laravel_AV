@@ -1,3 +1,4 @@
+@import "aking_potential.css";
 * {
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }
@@ -24,6 +25,18 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 30px;
+}
+
+.c-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: nowrap;
+    margin: 0 15px;
+}
+
+.c-row__col {
+    padding: 0 15px;
 }
 
 /* Header */
