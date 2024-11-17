@@ -66,48 +66,52 @@
                             <br>
                             dân số đang sinh sống tại nông thôn là một nguồn lao động dồi dào, đầy tiềm năng phát triển
                         </p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div>    
+        
     
-        <div class="features">
-            <div class="features__item">
-                <div class="features__text">
-                Bất động sản nông nghiệp ngày càng phát triển với vô vàn tiềm năng, từ các mô hình homestay, farmstay, nông nghiệp, du lịch cộng đồng, du lịch kết hợp nghỉ dưỡng, du lịch trải nghiệm, du lịch văn hóa,...
-                </div>
-            </div>
-        
-            <div class="features__item">
-                <div class="features__text">
-                Chủ trương, chính sách của Đảng và Nhà nước về chuyển đổi cơ cấu kinh tế nông thôn bền vững và đất, phát triển kinh tế nông thôn bền vững và môi dây là Nghị quyết đã đang ngày càng thúc đẩy bất động sản nông nghiệp, du lịch nông nghiệp phát triển.
-                </div>
-            </div>
-        
-            <div class="features__item">
-                <div class="features__text">
-                GIẢI PHÁP "CỨU CÁNH" AN TOÀN DÀNH CHO NĐT TRƯỚC BIẾN ĐỘNG THỊ TRƯỜNG
-                <ul class="features__list">
-                    <li>Thị trường Bất động sản Phân lô Bán nền, Bất động sản đô thị vẫn trì, Nghỉ dưỡng, nhà phố đang có xu hướng chậm lại, thanh khoản yếu.</li>
-                    <li>Chứng khoán: Thị trường đang biến động, loanh quanh mốc 1.000 điểm.</li>
-                </ul>
+            <div class="features">
+                <div class="c-row c-row--inner">
+                    <div class="c-row__col">
+                        <div class="model__bullet"></div>
+                        <p class="c-desc">
+                        Bất động sản nông nghiệp ngày càng phát triển với vô vàn tiềm năng, từ các mô hình homestay, farmstay, nông nghiệp, du lịch cộng đồng, du lịch kết hợp nghỉ dưỡng, du lịch trải nghiệm, du lịch văn hóa,...
+                        </p>
+                    </div>
+                
+                    <div class="c-row__col">
+                        <div class="model__bullet"></div>
+                        <p class="c-desc">
+                        Chủ trương, chính sách của Đảng và Nhà nước về chuyển đổi cơ cấu kinh tế nông thôn bền vững và đất, phát triển kinh tế nông thôn bền vững và môi dây là Nghị quyết đã đang ngày càng thúc đẩy bất động sản nông nghiệp, du lịch nông nghiệp phát triển.
+                        </p>
+                    </div>
+                
+                    <div class="c-row__col">
+                        <div class="model__bullet"></div>
+                        <p class="c-desc">
+                        GIẢI PHÁP "CỨU CÁNH" AN TOÀN DÀNH CHO NĐT TRƯỚC BIẾN ĐỘNG THỊ TRƯỜNG
+                        <span>
+                            &bull; Thị trường Bất động sản Phân lô Bán nền, Bất động sản đô thị vẫn trì, Nghỉ dưỡng, nhà phố đang có xu hướng chậm lại, thanh khoản yếu.
+                            <br>
+                            &bull; Chứng khoán: Thị trường đang biến động, loanh quanh mốc 1.000 điểm.
+                        </span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     
         <div class="image-section">
-            <img src="path-to-image.jpg" alt="Aerial view of agricultural land" class="image-section__img">
-            <div class="image-section__points">
-                <div class="image-section__point">
-                Đáp ứng nhu cầu về lương thực, thực phẩm sạch của người tiêu dùng.
+                <div class="image-section__bottom--content">
+                    <p class="c-desc u--green1">Giá trị thấp chưa bị đẩy lên cao.</p>
                 </div>
-                <div class="image-section__point">
-                Tăng giá trị phát triển kinh tế và tạo công ăn việc làm cho người dân.
+                <div class="image-section__bottom--content">
+                    <p class="c-desc u--blue">Đáp ứng nhu cầu về lương thực, thực phẩm sạch của người tiêu dùng.</p>
+                    <p class="c-desc u--green">Tăng giá trị phát triển kinh tế và tạo công ăn việc làm cho người dân.</p>
                 </div>
-                <div class="image-section__point">
-                Giá trị thấp chưa bị đẩy lên cao.
-                </div>
-            </div>
         </div>
+        
     </div>
   </div>
 @endsection

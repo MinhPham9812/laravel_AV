@@ -17,12 +17,12 @@
             [
                 'route' => 'aking-general',
                 'label' => 'Mô hình Aking Village',
-                'arrow_right' => ''
+                'arrow_right' => 'aking-potential'
             ],
             [
                 'route' => 'aking-potential',
                 'label' => 'Tiềm năng BĐS nông nghiệp',
-                'arrow_left' => '',
+                'arrow_left' => 'aking-general',
                 'arrow_right' => ''
             ],
             [

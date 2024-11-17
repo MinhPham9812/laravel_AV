@@ -31,12 +31,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-flow: nowrap;
+    flex-flow: row wrap;
     margin: 0 15px;
 }
 
 .c-row__col {
     padding: 0 15px;
+}
+
+.c-desc{
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.model__bullet {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    position: relative;
+}
+
+.model__bullet::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: -15px;
+    left: -15px;
+    background-color: rgba(139, 195, 74, 0.2);
+    border-radius: 50%;
 }
 
 /* Header */
