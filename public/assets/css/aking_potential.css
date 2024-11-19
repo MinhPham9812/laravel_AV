@@ -1,7 +1,7 @@
 .potential__title {
     text-align: center;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 
@@ -19,10 +19,40 @@
     margin-top: 10px;
 }
 
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .potential__title {
+        font-size: 2.5rem;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .potential__title {
+        text-align: center;
+        margin-top: 42px;
+        font-size: 2rem;
+    }
+
+    .potential__title-highlight{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .potential__title {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+}
+
 /* Stat style */
 .stats {
     padding: 0 46px 110px;
     margin-top: 77px;
+}
+
+.potential .stats .c-row{
+    align-items: initial;
 }
 
 .potential .stats .c-row--top {
@@ -86,6 +116,19 @@
     }
 }
 
+@media only screen and (max-width: 767px) {
+    
+    .potential .stats .c-row--top {
+        margin: 0;
+    }
+
+    .potential .stats .c-row--top .c-row__col{
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+}
+
 
 /* Features style */
 .potential .features .c-row {
@@ -113,6 +156,36 @@
 .potential .features .c-row--inner .c-desc span{
     display: block;
     padding-left: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .potential .features .c-row--inner .c-row__col {
+        width: 33.3%;
+    }   
+}
+
+@media only screen and (max-width: 767px) {
+    .potential .features .c-row--inner {
+        margin: 0;
+    }
+    .potential .features .c-row--inner .c-row__col {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    
+    .potential .features .c-row--inner .c-row__col .model__bullet{
+        
+        width: 9px;
+        height: 9px;
+    }
+
+    .potential .features .c-row--inner .c-row__col .model__bullet::before{
+        top: -8px;
+        left: -9px;
+        width: 27px;
+        height: 27px;
+    }
 }
 
 /* Image style */
@@ -167,5 +240,13 @@
 .potential .image-section__bottom--content .u--green{
     background: #779634;
 }
+
+@media only screen and (max-width: 1024px) {
+    .potential .image-section__bottom--content p{
+        width: 50%;
+        padding: 20px;
+    }
+}
+
 
 

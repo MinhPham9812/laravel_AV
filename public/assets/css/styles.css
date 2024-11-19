@@ -3,13 +3,16 @@
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }
 
-html,
+html{
+    font-size: 62.5%;
+}
 body {
     width: 100%;
     height: auto;
     margin: 0 auto;
     padding: 0;
     font-family: "Barlow";
+    font-size: 1.6rem;
 }
 
 #main {
@@ -43,8 +46,15 @@ body {
     font-family: "Encode Sans";
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 26px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .c-desc {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
 }
 
 .model__bullet {
@@ -80,12 +90,6 @@ body {
     z-index: 1000;
     display: flex;
     align-items: center;
-}
-
-.c-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Logo */
