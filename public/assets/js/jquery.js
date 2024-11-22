@@ -1,57 +1,65 @@
 $(document).ready(function() {
-    var header = $('.header');
-    var logo = $('.header__logo-img');
+    const header = $('.header');
+    const logo = $('.header__logo-img');
+    const root = document.documentElement;
     
     // Các giá trị chiều cao
-    var headerHeightInitial = 127; 
-    var headerHeightSmall = 70;    
-    var logoHeightInitial = 70;    
-    var logoHeightSmall = 55;      
+    const heights = {
+        default: 127,
+        medium: 100,
+        small: 70,
+        scrolled: 70
+    };
     
-    // Điều chỉnh chiều cao header theo kích thước màn hình
-    function adjustHeaderHeight() {
-        var windowWidth = $(window).width();
+    const logoHeights = {
+        default: 70,
+        small: 55
+    };
+
+    function updateHeaderHeight(height) {
+        root.style.setProperty('--header-height', `${height}px`);
+    }
+
+    function adjustLayout() {
+        const windowWidth = $(window).width();
         
         if (windowWidth <= 1050) {
-            header.css('height', headerHeightSmall + 'px');
-            logo.css('height', logoHeightSmall + 'px');
+            updateHeaderHeight(heights.small);
+            logo.height(logoHeights.small);
         } else if (windowWidth <= 1440) {
-            header.css('height', '100px');
-            logo.css('height', logoHeightInitial + 'px');
+            updateHeaderHeight(heights.medium);
+            logo.height(logoHeights.default);
         } else {
-            header.css('height', headerHeightInitial + 'px');
-            logo.css('height', logoHeightInitial + 'px');
+            updateHeaderHeight(heights.default);
+            logo.height(logoHeights.default);
         }
     }
 
-    // Gọi hàm điều chỉnh chiều cao khi tải lại trang và khi thay đổi kích thước trang
-    adjustHeaderHeight();
-    $(window).resize(adjustHeaderHeight);
-
-    // Xử lý cuộn trang
-    var lastScrollTop = 0;
+    // Scroll handler
+    let lastScrollTop = 0;
     $(window).on('scroll', function() {
-        var scrollTop = $(this).scrollTop();
-
+        const scrollTop = $(this).scrollTop();
+        
         if (scrollTop > lastScrollTop) {
-            // Lăn chuột xuống: ẩn header
-            header.css('top', -headerHeightInitial + 'px');
+            // Scrolling down
+            header.css('transform', `translateY(-${heights.default}px)`);
         } else {
-            // Lăn chuột lên: hiện header với chiều cao nhỏ
-            header.css({
-                'top': '0',
-                'height': headerHeightSmall + 'px'
-            });
-            logo.css('height', logoHeightSmall + 'px');
+            // Scrolling up
+            header.css('transform', 'translateY(0)');
+            updateHeaderHeight(heights.scrolled);
+            logo.height(logoHeights.small);
         }
 
-        // Khi cuộn đến trên cùng của trang, trả lại chiều cao ban đầu của header
         if (scrollTop === 0) {
-            adjustHeaderHeight();
+            adjustLayout();
         }
 
-        lastScrollTop = scrollTop; // Cập nhật vị trí cuộn hiện tại
+        lastScrollTop = scrollTop;
     });
+
+    // Initial setup and resize handler
+    adjustLayout();
+    $(window).resize(adjustLayout);
 
     // Mở sidebar khi nhấn nút nav-bars-btn
     $('.header__bars-btn').click(function() {
