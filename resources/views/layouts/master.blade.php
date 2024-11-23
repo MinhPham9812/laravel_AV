@@ -31,7 +31,7 @@
     <main>
         @if(Request::is('/'))
             @yield('home')
-        @elseif(Request::is('aking-general*')|| Request::is('aking-potential*') )  {{-- Thêm * để bắt tất cả các route con của aking --}}
+        @elseif(Request::is('aking-general*') || Request::is('aking-potential*') || Request::is('aking-roadmap*') )  {{-- Thêm * để bắt tất cả các route con của aking --}}
             @yield('tab-aking')
         @elseif(Request::is('news*') || Request::is('newsProject*') || Request::is('notificationPage*') || Request::is('event*'))
             @yield('tab-news')

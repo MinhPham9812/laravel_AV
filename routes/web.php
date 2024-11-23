@@ -33,3 +33,7 @@ Route::get('/aking-general', function () {
 Route::get('/aking-potential', function (){
     return view('akingVillage.aking-potential');
 });
+
+Route::get('/aking-roadmap', function (){
+    return view('akingVillage.aking-roadmap');
+});

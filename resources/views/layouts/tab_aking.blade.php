@@ -23,10 +23,10 @@
                 'route' => 'aking-potential',
                 'label' => 'Tiềm năng BĐS nông nghiệp',
                 'arrow_left' => 'aking-general',
-                'arrow_right' => ''
+                'arrow_right' => 'aking-roadmap'
             ],
             [
-                'route' => '',
+                'route' => 'aking-roadmap',
                 'label' => 'Lộ trình đầu tư & khai thác',
                 'arrow_left' => '',
                 'arrow_right' => ''
@@ -51,7 +51,9 @@
         @if(Request::is('aking-general'))
             @yield('aking-general') 
         @elseif(Request::is('aking-potential')) 
-            @yield('aking-potential')          
+            @yield('aking-potential') 
+        @elseif(Request::is('aking-roadmap')) 
+            @yield('aking-roadmap')         
         @endif
     </div>
 @endsection
