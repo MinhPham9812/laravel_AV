@@ -1,6 +1,6 @@
-.roadmap .roadmap__layout{
+.roadmap .roadmap__layout {
     background-color: #fffae9;
-    background-image: url('../images/bkRoadmap.svg');
+    background-image: url("../images/bkRoadmap.svg");
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: contain;
@@ -13,7 +13,7 @@
     margin-bottom: 110px;
 }
 
-.roadmap .roadmap__title h2{
+.roadmap .roadmap__title h2 {
     margin-bottom: 8px;
 }
 
@@ -21,29 +21,29 @@
     .roadmap .roadmap__layout {
         padding: 35px 0 40px;
     }
-    
+
     .roadmap .roadmap__title {
         margin-bottom: 50px;
     }
 }
 
 /* style roadmap__route */
-.roadmap .roadmap__inner{
+.roadmap .roadmap__inner {
     padding-bottom: 100px;
 }
-.roadmap .roadmap__route{
+.roadmap .roadmap__route {
     display: flex;
     position: relative;
     width: 88%;
     margin: 0 auto;
 }
 
-.roadmap .c-route__list{
+.roadmap .c-route__list {
     width: 25%;
     position: relative;
 }
 
-.roadmap .c-route__list::before{
+.roadmap .c-route__list::before {
     content: "";
     position: absolute;
     top: 25px;
@@ -61,7 +61,7 @@
 }
 
 @media only screen and (min-width: 1025px) {
-    .roadmap .roadmap__inner{
+    .roadmap .roadmap__inner {
         padding-bottom: 230px;
     }
 
@@ -71,7 +71,7 @@
         width: 100%;
     }
 
-    .roadmap .c-route__list .c-title2{
+    .roadmap .c-route__list .c-title2 {
         position: absolute;
         left: -25%;
         top: 50px;
@@ -111,7 +111,7 @@
         margin: 0 auto;
     }
 
-    .roadmap .roadmap__route{
+    .roadmap .roadmap__route {
         flex-wrap: wrap;
         width: 100%;
     }
@@ -141,7 +141,7 @@
         font-style: normal;
         font-weight: 700;
     }
-    
+
     .roadmap .c-route__list .c-title2 {
         text-align: left;
         margin-top: -25px;
@@ -181,13 +181,140 @@
     }
 }
 
-.roadmap .c-desc.mr-auto{
+.roadmap .c-desc.mr-auto {
     max-width: 1083px;
     margin: 0 auto;
     text-align: center;
 }
 
+/* style tab */
+.roadmap .roadmap-tabs {
+    margin: 80px 0;
+    border-bottom: 0.5px solid black;
+}
 
+.roadmap .roadmap-tabs__list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0;
+}
 
+.roadmap .roadmap-tabs__item {
+    position: relative;
+    width: 20%;
+    text-align: center;
+    padding: 36px 10px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
 
+.roadmap .roadmap-tabs__item a {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
 
+.roadmap .roadmap-tabs__item.is-active a {
+    font-weight: 700;
+}
+
+.roadmap .roadmap-tabs__item:not(.is-active)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary);
+    transition: width 0.3s ease-in-out;
+}
+
+.roadmap .roadmap-tabs__item:not(.is-active):hover::after {
+    width: 100%;
+    opacity: 0.8;
+}
+
+/* Border bottom cho active item */
+.roadmap .roadmap-tabs__item.is-active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+/* tab-content */
+.roadmap .roadmap-tabs__content {
+    padding-bottom: 80px;
+}
+
+.roadmap .roadmap-tabs__pane {
+    position: relative;
+}
+
+.roadmap .roadmap-tabs__pane img {
+    border-radius: 60px;
+}
+
+.roadmap .roadmap-tabs__text {
+    color: #eeebe2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 75px;
+}
+
+/* Mặc định ẩn tất cả tabs */
+.roadmap-tabs__pane {
+    display: none;
+}
+
+/* Hiện tab active */
+.roadmap-tabs__pane.is-active {
+    display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+    .roadmap .roadmap-tabs {
+        margin: 20px 0;
+        border-bottom: 0;
+    }
+
+    .roadmap .roadmap-tabs__item {
+        padding: 10px 5px;
+        display: block !important;
+        width: 50%;
+    }
+
+    .roadmap .roadmap-tabs__item a {
+        font-size: 1.3rem;
+    }
+
+    .roadmap .roadmap-tabs__pane img {
+        height: 350px;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+
+    .roadmap .roadmap-tabs__text {
+        padding: 20px 20px 30px;
+        top: initial;
+        bottom: 0;
+        transform: none;
+    }
+
+    .roadmap .roadmap-tabs__text .c-title1 {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+    .roadmap .roadmap-tabs__text .c-title2 {
+        font-size: 1.8rem;
+        line-height: 28px;
+    }
+}

@@ -1,66 +1,81 @@
-:root{
-    --primary:#63A940;
-
+:root {
+    --primary: #63a940;
 }
 
-html{
-  font-size: 62.5%;
-  max-width: 1920px;
-  margin: 0 auto;
+html {
+    font-size: 62.5%;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 body {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 0;
-  font-family: "Barlow";
-  font-size: 1.6rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Barlow";
+    font-size: 1.6rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Barlow";
-  font-style: normal;
-  font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.7;
 }
 
 .l-container {
-  max-width: 1520px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
 .c-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 0 15px;
 }
 
 .c-row__col {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
-.c-desc{
-  font-family: "Encode Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 26px;
+.c-desc {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 26px;
 }
 
-.c-title1{
-  font-size: 5rem;
-  line-height: 50px;
-  text-transform: uppercase;
+.c-title1 {
+    font-size: 5rem;
+    line-height: 50px;
+    text-transform: uppercase;
 }
 
 .c-title2 {
-  font-weight: 600;
-  font-size: 4rem;
-  line-height: 56px;
-  text-transform: uppercase;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 56px;
+    text-transform: uppercase;
 }
 
 /* @media (min-width: 1401px) and (max-width: 1700px) {
@@ -83,74 +98,74 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 @media only screen and (max-width: 1024px) {
-  .c-desc {
-      font-size: 1.4rem;
-      line-height: 1.5;
-  }
+    .c-desc {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
 
-  .c-title1 {
-      font-size: 3rem;
-      line-height: 1.5;
-  }
+    .c-title1 {
+        font-size: 3rem;
+        line-height: 1.5;
+    }
 
-  .c-title2 {
-      font-size: 2rem;
-      line-height: 24px;
-  }
+    .c-title2 {
+        font-size: 2rem;
+        line-height: 24px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-  .c-title1 {
-      font-size: 2rem;
-      line-height: 1.5;
-  }
-  
-  .c-title2 {
-      font-size: 1.6rem;
-      line-height: 1.5;
-  }
+    .c-title1 {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .c-title2 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
 }
 
-.c-dotitem{
-  position: relative;
-  display: inline-block;
+.c-dotitem {
+    position: relative;
+    display: inline-block;
 }
 
 .c-dotitem::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background-color: var(--primary);
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: var(--primary);
 }
 
 .c-dotitem::before {
-  content: "";
-  position: absolute;
-  width: 47px;
-  height: 47px;
-  top: -15px;
-  left: -15px;
-  background-color: rgba(139, 195, 74, 0.2);
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: -15px;
+    left: -15px;
+    background-color: rgba(139, 195, 74, 0.2);
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-dotitem::after {
-      width: 12px;
-      height: 12px;
-      top: -11px;
-      left: -5px;
-  }
+    .c-dotitem::after {
+        width: 12px;
+        height: 12px;
+        top: -11px;
+        left: -5px;
+    }
 
-  .c-dotitem::before {
-    width: 37px;
-    height: 37px;
-    left: -18px;
-    top:-23px
-}
+    .c-dotitem::before {
+        width: 37px;
+        height: 37px;
+        left: -18px;
+        top: -23px;
+    }
 }
 
 .model__bullet,
@@ -168,110 +183,106 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Barlow", sans-serif;
     font-weight: 100;
     font-style: normal;
-  }
-  
-  .barlow-extralight {
+}
+
+.barlow-extralight {
     font-family: "Barlow", sans-serif;
     font-weight: 200;
     font-style: normal;
-  }
-  
-  .barlow-light {
+}
+
+.barlow-light {
     font-family: "Barlow", sans-serif;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  .barlow-regular {
+}
+
+.barlow-regular {
     font-family: "Barlow", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .barlow-medium {
+}
+
+.barlow-medium {
     font-family: "Barlow", sans-serif;
     font-weight: 500;
     font-style: normal;
-  }
-  
-  .barlow-semibold {
+}
+
+.barlow-semibold {
     font-family: "Barlow", sans-serif;
     font-weight: 600;
     font-style: normal;
-  }
-  
-  .barlow-bold {
+}
+
+.barlow-bold {
     font-family: "Barlow", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
-  
-  .barlow-extrabold {
+}
+
+.barlow-extrabold {
     font-family: "Barlow", sans-serif;
     font-weight: 800;
     font-style: normal;
-  }
-  
-  .barlow-black {
+}
+
+.barlow-black {
     font-family: "Barlow", sans-serif;
     font-weight: 900;
     font-style: normal;
-  }
-  
-  .barlow-thin-italic {
+}
+
+.barlow-thin-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 100;
     font-style: italic;
-  }
-  
-  .barlow-extralight-italic {
+}
+
+.barlow-extralight-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 200;
     font-style: italic;
-  }
-  
-  .barlow-light-italic {
+}
+
+.barlow-light-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 300;
     font-style: italic;
-  }
-  
-  .barlow-regular-italic {
+}
+
+.barlow-regular-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 400;
     font-style: italic;
-  }
-  
-  .barlow-medium-italic {
+}
+
+.barlow-medium-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 500;
     font-style: italic;
-  }
-  
-  .barlow-semibold-italic {
+}
+
+.barlow-semibold-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 600;
     font-style: italic;
-  }
-  
-  .barlow-bold-italic {
+}
+
+.barlow-bold-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 700;
     font-style: italic;
-  }
-  
-  .barlow-extrabold-italic {
+}
+
+.barlow-extrabold-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 800;
     font-style: italic;
-  }
-  
-  .barlow-black-italic {
+}
+
+.barlow-black-italic {
     font-family: "Barlow", sans-serif;
     font-weight: 900;
     font-style: italic;
-  }
-
-
-
-  
+}

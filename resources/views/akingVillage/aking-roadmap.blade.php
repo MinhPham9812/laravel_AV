@@ -67,5 +67,46 @@
             
         </div>
     </section>
+
+    <div class="l-container">
+        <div class="roadmap-tabs">
+            <!-- Tab links -->
+            <ul class="roadmap-tabs__list" id="js-showtab">
+                <li class="roadmap-tabs__item is-active">
+                    <a href="#tab1">Dự án đang triển khai</a>
+                </li>
+                <li class="roadmap-tabs__item">
+                    <a href="#tab2">Dự án sắp triển khai</a>
+                </li>
+            </ul>
+        </div>    
+            <!-- Tab content -->
+            <div class="roadmap-tabs__content">
+                <!-- Tab 1 -->
+                <div class="roadmap-tabs__pane is-active" id="tab1">
+                        <img src="assets/images/shutterstock_555184306.svg" alt="Làng Dứa Vĩnh Long">
+                        <div class="roadmap-tabs__text">
+                            <h3 class="c-title1">LÀNG DỨA VĨNH LONG</h3>  
+                            <h4 class="c-title2">
+                                QUY MÔ: <span>10 HA</span><br>
+                                VỐN ĐẦU TƯ: ...
+                            </h4>
+                        </div>
+                </div>
+    
+                <!-- Tab 2 -->
+                <div class="roadmap-tabs__pane" id="tab2">
+                        <img src="assets/images/shutterstock_555184306.svg" alt="Làng Dứa Vĩnh Long">
+                        <div class="roadmap-tabs__text">
+                            <h3 class="c-title1">LÀNG DỨA VĨNH LONG</h3>
+                            <h4 class="c-title2">
+                                QUY MÔ: <span>100 HA</span><br>
+                                VỐN ĐẦU TƯ: ...
+                            </h4>
+                        </div>
+                </div>
+            </div>
+    </div>
 </div>  
 @endsection
+
