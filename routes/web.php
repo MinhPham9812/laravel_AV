@@ -37,3 +37,7 @@ Route::get('/aking-potential', function (){
 Route::get('/aking-roadmap', function (){
     return view('akingVillage.aking-roadmap');
 });
+
+Route::get('/aking-lion-value', function (){
+    return view('akingVillage.aking-lionValue');
+});

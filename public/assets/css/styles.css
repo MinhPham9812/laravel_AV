@@ -1,5 +1,6 @@
 @import "aking_potential.css";
 @import "aking_roadmap.css";
+@import "aking_lionValue.css";
 * {
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }
@@ -601,7 +602,6 @@
     align-items: center; /* Align items vertically */
     background-color: var(--primary);
     height: 251px;
-    margin-top: 5%;
 }
 
 #nav-logo-footer {

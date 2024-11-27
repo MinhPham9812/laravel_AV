@@ -1,0 +1,118 @@
+.lionValue .lionValue__inner{
+    background-image: url('../images/bkLionValue.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+    background-color: #fffae9;
+    border-radius: 40px;
+    padding: 60px;
+}
+
+.lionValue .lionValue__inner .c-title1{
+    margin-bottom: 10px;
+}
+
+.lionValue .lionValue__inner .c-row{
+    margin: 40px -60px 0;
+    align-items: initial;
+}
+
+.lionValue .lionValue__inner .c-row__col {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.lionValue .lionValue__inner .c-subtitle{
+    margin-bottom: 10px;
+}
+
+.lionValue .lionValue__inner .lionValue__slide-desc{
+    min-height: 145px;
+}
+
+@media (max-width: 1440px){
+    .lionValue .lionValue__inner .lionValue__slide-desc{
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 1024px){
+    .lionValue .lionValue__inner .lionValue__slide-desc{
+        min-height: auto;
+    }
+}
+
+.lionValue .lionValue__inner .lionValue__slide-image {
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+    border-radius: 49px;
+}
+
+.lionValue .lionValue__inner .swiper-pagination{
+    display: flex;
+    justify-content: flex-start; /* Căn trái thay vì center */
+    padding-left: 60px; /* Căn lề trái để khớp với content */
+    position: relative; /* Đảm bảo không bị position: absolute; của Swiper */
+    bottom: auto; /* Reset bottom của Swiper */
+    margin-top: 40px;
+    margin-left: -20px;
+}
+
+
+.lionValue .swiper-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hiển thị 2 slides active */
+.lionValue .swiper-slide-active,
+.lionValue .swiper-slide-next {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Trường hợp slide cuối */
+.lionValue .swiper-slide-active + .swiper-slide {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lionValue .swiper-slide-active {
+    position: relative;
+}
+
+.lionValue .swiper-slide-active::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+    /* Ẩn divider khi chỉ hiển thị 1 slide */
+    .lionValue .swiper-slide-active::after {
+        display: none;
+    }
+
+    /* Điều chỉnh pagination khi chỉ có 1 slide */
+    .lionValue .swiper-pagination {
+        margin-top: 20px;
+    }
+
+    /* Ẩn slide không active */
+    .lionValue .swiper-slide-active + .swiper-slide {
+        opacity: 0;
+    }
+
+
+    .lionValue .lionValue__inner .swiper-pagination{
+        justify-content: center;
+    }
+}

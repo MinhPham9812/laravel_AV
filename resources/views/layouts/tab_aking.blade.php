@@ -28,14 +28,14 @@
             [
                 'route' => 'aking-roadmap',
                 'label' => 'Lộ trình đầu tư & khai thác',
-                'arrow_left' => '',
-                'arrow_right' => ''
+                'arrow_left' => 'aking-potential',
+                'arrow_right' => 'aking-lionValue'
             ],
             [
-                'route' => '',
+                'route' => 'aking-lion-value',
                 'label' => 'Hệ giá trị Lion',
-                'arrow_left' => '',
-                'arrow_right' => ''
+                'arrow_left' => 'aking-roadmap',
+                'arrow_right' => '/'
             ],
             [
                 'route' => '/',
@@ -53,7 +53,9 @@
         @elseif(Request::is('aking-potential')) 
             @yield('aking-potential') 
         @elseif(Request::is('aking-roadmap')) 
-            @yield('aking-roadmap')         
+            @yield('aking-roadmap')    
+        @elseif(Request::is('aking-lion-value')) 
+            @yield('aking-lionValue')        
         @endif
     </div>
 @endsection
