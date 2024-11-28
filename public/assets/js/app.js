@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         loop: true,
-        speed: 1,
+        speed: 800,
+        spaceBetween: 60,
         slidesPerView: 1,
         autoHeight: true,
     };
@@ -105,6 +106,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 1,
                 }
             }
+        });
+    }
+
+    if (window.location.pathname === "/" || window.location.pathname.includes("/home")) {
+        const home1Swiper = new Swiper(".home1 .swiper-base", {
+            slidesPerView: 1,
+            spaceBetween: 60,
+            pagination: {
+                el: '.swiper-pagination', 
+                clickable: true,
+            },
+            loop: true,
+            speed: 800,
+            autoHeight: true
         });
     }
 });

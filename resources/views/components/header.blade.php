@@ -43,30 +43,29 @@
             <div class="header__search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-
-            <!-- Sidebar Structure -->
-            <div class="header__overlay"></div> <!-- Overlay, hiển thị khi mở sidebar -->
-
-            <div class="header__mobile">
-                <span class="header__mobile-close">&times;</span> <!-- Nút đóng sidebar -->
-                <ul class="header__mobile-menu">
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">ANKING VILLAGE</a></li>
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">DỰ ÁN LÀNG DỨA</a></li>
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">ĐẦU TƯ FARM</a></li>
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">HỘI THẢO ĐẦU TƯ</a></li>
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">TIN TỨC</a></li>
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Q&A</a></li>
-                    <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">CONTACT</a></li>
-                    
-                    <div class="header__mobile-social">
-                        <a href="" class="header__mobile-social-icon">f</a>
-                        <a href="#" class="header__mobile-lang header__mobile-lang--active">VI</a>
-                        <a href="#" class="header__mobile-lang">EN</a>
-                    </div>
-                </ul>
-            </div>
         </div>    
     </div>
+     <!-- Sidebar Structure -->
+     <div class="header__overlay"></div> <!-- Overlay, hiển thị khi mở sidebar -->
+            
+     <div class="header__mobile">
+         <span class="header__mobile-close">&times;</span> <!-- Nút đóng sidebar -->
+         <ul class="header__mobile-menu">
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">ANKING VILLAGE</a></li>
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">DỰ ÁN LÀNG DỨA</a></li>
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">ĐẦU TƯ FARM</a></li>
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">HỘI THẢO ĐẦU TƯ</a></li>
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">TIN TỨC</a></li>
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Q&A</a></li>
+             <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">CONTACT</a></li>
+             
+             <div class="header__mobile-social">
+                 <a href="" class="header__mobile-social-icon">f</a>
+                 <a href="#" class="header__mobile-lang header__mobile-lang--active">VI</a>
+                 <a href="#" class="header__mobile-lang">EN</a>
+             </div>
+         </ul>
+     </div>
 </div>
 
 <!-- end Header -->

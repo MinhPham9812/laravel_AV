@@ -1,27 +1,35 @@
 /* swiper-base.css */
 /* Base swiper styles */
+
 .swiper {
     position: relative;
-    z-index: 1;
     height: auto;
 }
+
+.swiper-slide {
+    width: 100%; /* Đảm bảo slide chiếm toàn bộ chiều rộng */
+    position: relative; /* Đảm bảo positioning chính xác */
+    visibility: visible; /* Đảm bảo slide luôn visible */
+}
+
 .swiper-base {
+    overflow: hidden; /* Ngăn slides tràn ra ngoài */
+    width: 100%; /* Đảm bảo swiper container có width đúng */
     height: auto;
-    padding-bottom: 0;
-    position: relative;
-    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px; /* Tạo không gian cho pagination */
+    padding-left: 20px;
 }
 
 .swiper-wrapper {
-    position: relative;
-    z-index: 1;
+    height: auto;
 }
 
 .swiper-base .swiper-pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4vw; /* Bỏ gap để các bullet liền nhau */
+    gap: 6vw; 
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -42,7 +50,7 @@
     position: absolute;
     top: 50%;
     left: 100%;
-    width: 5vw;
+    width: 7vw;
     height: 0.5px;
     background-color: var(--primary);
     transform: translateY(-50%);

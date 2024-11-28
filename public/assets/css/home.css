@@ -1,3 +1,55 @@
+/* home 1 */
+.home1 .home1__image{
+    width: 30%;
+}
 
+.home1 .home1__content{
+    width: 70%;
+    padding-left: 100px;
+    padding-top: 13%;
+}
+
+/* SVG styles */
+.c-btn3 svg {
+    margin-left: 12px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.c-btn3 path {
+    transition: all 0.3s ease;
+}
+
+/* Normal state - màu trắng */
+.c-btn3 path[stroke] {
+    stroke: var(--primary); /* Màu cho border của circle */
+}
+
+.c-btn3 path[fill] {
+    fill: var(--primary); /* Màu cho mũi tên */
+}
+
+/* Hover state - màu xanh */
+.c-btn3:hover path[stroke] {
+    stroke: var(--primary);
+}
+
+.c-btn3:hover path[fill] {
+    fill: #EEEBE2;
+}
+
+.c-btn3:hover svg{
+    background-color: var(--primary);
+}
+
+.home1 .swiper-pagination{
+    display: flex;
+    justify-content: flex-start; /* Căn trái thay vì center */
+    padding-left: 30px; /* Căn lề trái để khớp với content */
+    position: relative; /* Đảm bảo không bị position: absolute; của Swiper */
+    bottom: auto; /* Reset bottom của Swiper */
+    margin-top: 40px;
+    margin-left: -20px;
+}
 
 

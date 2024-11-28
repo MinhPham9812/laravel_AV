@@ -49,6 +49,24 @@ section{
     padding: 0 30px;
 }
 
+p {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+
+.c-btn3 {
+    display: flex;
+    align-items: center;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
 .c-row {
     display: flex;
     align-items: center;

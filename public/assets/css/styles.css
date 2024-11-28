@@ -26,7 +26,11 @@
 .header {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 100%;
+    max-width: 1920px;
     height: var(--header-height);
     background-color: var(--primary);
     transition: all 0.6s ease;
@@ -35,6 +39,8 @@
 
 .header .l-container{
     height: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .header .c-row{
@@ -42,6 +48,8 @@
     gap: 40px;
     white-space: nowrap;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 /* Logo */
@@ -189,7 +197,7 @@
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
     :root{
         --header-height: 70px;
     }
@@ -222,9 +230,19 @@
     .header__logo-img {
         height: 55px;
     }
+
+    .header__mobile,
+    .header__overlay {
+        display: block; 
+    }   
 }
 
 /* Overlay */
+.header__mobile,
+.header__overlay {
+    display: none;
+}
+
 .header__overlay {
     display: none;
     position: fixed;
@@ -325,6 +343,10 @@
     margin-right: auto;
 }
 
+.slider.slider--home .slider__content {
+    max-width: 700px;
+}
+
 /* Tiêu đề của slider */
 .slider__title {
     font-size: 4rem;
@@ -345,6 +367,20 @@
     padding: 180px 0;
 }
 
+.slider--home .slider__title{
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 58px;
+}
+
+.slider--home .slider__subtitle{
+    font-size: 40px;
+    font-style: italic;
+    line-height: 48px;
+    text-transform: initial;
+    font-weight: 600;
+}
+
 /* Slider--news */
 .slider--news {
     background-image: url("../images/shutterstock.svg");
@@ -357,14 +393,36 @@
     padding: 159px 0 136px;
 }
 
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .slider--home .slider__title {
+        font-size: 3rem;
+        line-height: 35px;
+    }
+
+    .slider--home .slider__subtitle {
+        font-size: 2.5rem;
+        line-height: 36px;
+    }
+}
+
 @media only screen and (max-width: 1024px){
     .slider__title{
         font-size: 3rem;
         line-height: 36px;
     }
 
+    .slider--home .slider__title{
+        font-size: 3rem;
+        line-height: 36px;
+    }
+
     .slider__subtitle {
         font-size: 1.6rem;
+        line-height: 24px;
+    }
+
+    .slider--home .slider__subtitle {
+        font-size: 2rem;
         line-height: 24px;
     }
 }
