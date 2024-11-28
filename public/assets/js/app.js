@@ -110,12 +110,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (window.location.pathname === "/" || window.location.pathname.includes("/home")) {
+        // Thêm Swiper cho home1
         const home1Swiper = new Swiper(".home1 .swiper-base", {
             slidesPerView: 1,
             spaceBetween: 60,
             pagination: {
                 el: '.swiper-pagination', 
                 clickable: true,
+            },
+            loop: true,
+            speed: 800,
+            autoHeight: true
+        });
+
+         // Thêm Swiper cho home2
+        const home2Swiper = new Swiper(".home2 .swiper-base", {
+            slidesPerView: 1,
+            spaceBetween: 60,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Thêm navigation
+            navigation: {
+                // Sử dụng custom navigation
+                prevEl: '.home2 .prev-slide',
+                nextEl: '.home2 .next-slide',
             },
             loop: true,
             speed: 800,

@@ -52,4 +52,144 @@
     margin-left: -20px;
 }
 
+/* style home2 */
+.home2 {
+    background-image: url('../images/homeBk1.svg');
+    background-color: #fffae9;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+}
 
+.home2 .c-row__col{
+    width: 50%;
+    padding: 0;
+}
+
+.home2 .c-row__col:first-child{
+    width: 50%;
+    padding-right: 98px;
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .home2 .c-row__col:first-child {
+        padding-right: 40px;
+    }
+}
+
+.home2 .c-title1 {
+    margin-bottom: 10px;
+}
+/* Navigation buttons  */
+.home2 .js-showarrow{
+    display: flex;
+    align-items: center;
+    margin: 5px -10px 0;
+}
+
+.home2 .js-showarrow .button-slider{
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.home2 .js-showarrow .button-slider:hover{
+    opacity: 0.5;
+}
+
+/* Cột slider bên phải */
+.home2 .home2__slide{
+    border-radius: 80px;
+    overflow: hidden;
+    height: 75vh;
+    margin-right: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+
+.home2__image{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.3s ease;
+}
+.home2 .u-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home2 .home2__title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 0 50px;
+    transition: opacity 0.5s ease, visibility 0.3s ease;
+}
+
+.home2 .home2__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease, visibility 0.3s ease;
+}
+
+/* Style cho background overlay khi hover */
+.home2 .home2__slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary); /* Màu xanh với độ trong suốt */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+
+/* Hiệu ứng khi hover vào slide */
+.home2 .home2__slide:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.home2 .home2__slide:hover .home2__title {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.home2 .home2__slide:hover .home2__text {
+    opacity: 1;
+    visibility: visible;
+}
