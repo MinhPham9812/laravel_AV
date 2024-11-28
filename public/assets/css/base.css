@@ -57,6 +57,32 @@ p {
     line-height: 26px;
     margin-bottom: 16px;
 }
+.u-center{
+    text-align: center;
+}
+
+.u-btn {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding: 22px 40px;
+    line-height: 22px;
+    border-radius: 80px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.c-btn1{
+    color: #1b332e;
+    background: #fff;
+}
 
 .c-btn3 {
     display: flex;
@@ -72,7 +98,7 @@ p {
     align-items: center;
     justify-content: space-between;
     flex-flow: row wrap;
-    margin: 0 15px;
+    margin: 0 -15px;
 }
 
 .c-row__col {
@@ -209,9 +235,6 @@ p {
     composes: c-dotitem;
 }
 
-.u-center{
-    text-align: center;
-}
 
 .wrapper {
     max-width: 1460px;
