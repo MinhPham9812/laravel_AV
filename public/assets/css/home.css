@@ -232,7 +232,7 @@
 }
 
 /* style button */
-.u-btn{
+.home3 .u-btn{
     margin-top: 34px;
 }
 
@@ -293,6 +293,233 @@
     font-weight: 600;
 }
 
+/* Style home5 */
+.home5 {
+    min-height: 540px;
+    background-image: url('../images/homeBk3.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 0;
+    color: #fff;
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.home5 .c-title2 span {
+    display: block;
+    font-size: 3.5rem;
+    line-height: 42px;
+    color: #EEEBE2;
+}
 
+/* Style home6 */
+.home6{
+    background-image: url('../images/homeBanner3.png');
+    background-color: #fffae9;
+    padding: 100px 0 86px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 
+.home6 .l-container{
+    max-width: 1200px;
+}
+
+.home6 .c-row{
+    align-items: initial;
+    justify-content: initial;
+    margin: 0 -17.5px;
+}
+
+.home6 .c-row__col{
+    width: 33.3%;
+    padding: 0 17.5px;
+    margin-bottom: 34px;
+}
+
+.home6 .c-content{
+    position: relative;
+    border-radius: 50px;
+}
+
+/* Card 1 */
+.home6 .c-content.u-border{
+    padding: 21px 18px;
+    height: 100%;
+}
+
+.home6 .u-border{
+    border: 1px dashed var(--primary);
+}
+
+.home6 .c-content__inner{
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.home6 .c-content__inner h3{
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96.0818px;
+    line-height: 115px;
+    color: #dfcf9c;
+}
+
+.home6 .c-content__inner h2 {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 26px;
+    width: 100%;
+    padding-left: 67px;
+    text-align: left;
+}
+
+/* Another card */
+.home6 .u-boxshadow{
+    box-shadow: 0 0 41px rgba(0, 0, 0, 0.15);
+}
+
+.home6 .c-number{
+    position: absolute;
+    width: 48px;
+    height: 76.8px;
+    left: -10px;
+    top: -16px;
+    background: #fff;
+    border: 1px solid var(--primary);
+    border-radius: 9px;
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 70px;
+    text-align: center;
+    color: var(--primary);
+    box-shadow: 0 3.49091px 9.6px rgba(0, 0, 0, 0.15);
+}
+
+.home6 .c-content img{
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home6 .c-content p{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 26px;
+    min-height: 263px;
+    position: absolute;
+    bottom: 0;
+    padding: 0 40px 36px;
+    color: #fff;
+    background: linear-gradient(179.88deg, rgba(0, 0, 0, 0) .89%, rgba(9, 18, 16, 0.9) 64.89%);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 0;
+}
+
+.home6__bottom{
+    max-width: 950px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+.home6__bottom .c-title2{
+    margin-bottom: 31px;
+}
+
+.home6__bottom .c-title2 span{
+    font-size: 7rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .home6__bottom .c-title2 span{
+        font-size: 4rem;
+    }
+}
+
+.home6__bottom .u-btn:hover{
+    opacity: 0.8;
+    color: #fff;
+}
+
+/* Style home7 */
+.home7{
+    background-image: url('../images/homeBk4.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    text-align: center;
+    padding: 80px 0 226px;
+}
+
+.home7__inner{
+    max-width: 890px;
+    margin: 0 auto;
+}
+
+.home7__inner .c-title1{
+    margin-bottom: 70px;
+}
+
+.c-form__group{
+    display: flex;
+    padding-bottom: 25px;
+    gap: 0 20px;
+    position: relative;
+}
+
+.c-form__input{
+    background: #FFF;
+    border: 1px solid #1b332e;
+    border-radius: 10px;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 26px;
+    color: #1b332e;
+    padding: 20px 42px;
+    height: max-content;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.c-form .u--select {
+    background-image: url('../images/icon-down.png');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}
+
+.c-form .u--select option[value=""][disabled] {
+    display: none;
+}

@@ -33,9 +33,9 @@ a {
 }
 
 a:hover {
-    color: inherit;
+    color: initial;
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 section{
@@ -57,6 +57,13 @@ p {
     line-height: 26px;
     margin-bottom: 16px;
 }
+
+@media only screen and (min-width: 1025px) {
+    .only-sp {
+        display: none !important;
+    }
+}
+
 .u-center{
     text-align: center;
 }
@@ -79,9 +86,28 @@ p {
     transition: all 0.3s ease;
 }
 
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .u-btn {
+        padding: 15px 30px;
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .u-btn {
+        font-size: 1.4rem;
+        padding: 20px 40px;
+    }
+}
+
 .c-btn1{
     color: #1b332e;
     background: #fff;
+}
+
+.c-btn2{
+    background: linear-gradient(90deg, #63a940 5.7%, rgba(167, 209, 76, 0) 274.75%);
 }
 
 .c-btn3 {

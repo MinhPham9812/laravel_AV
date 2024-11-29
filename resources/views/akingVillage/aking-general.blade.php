@@ -166,7 +166,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="swiper-base">
+                <div class="swiper-base custom">
                     <!-- Các bullet sẽ được tạo tự động bởi Swiper -->
                     <div class="swiper-pagination"></div>
                 </div>

@@ -77,7 +77,7 @@
             </div>
 
             <!-- Mobile button -->
-            {{-- <a href="/" class="c-btn2 u-btn only-sp">Tìm hiểu thêm</a> --}}
+            <a href="/" class="c-btn2 u-btn only-sp">Tìm hiểu thêm</a>
         </div>
     </div>
 </section>
@@ -202,4 +202,146 @@
         </div>
     </div>
 </section>
+
+<section class="home5">
+    <div class="l-container">
+        <h2 class="c-title2">
+            <span>ƯU ĐÃI HẤP DẪN</span> 
+            TẶNG VOUCHER 100 TRIỆU ĐỒNG 
+            <span>CÁC KHÓA ĐÀO TẠO CHUYÊN SÂU DO AKING TỔ CHỨC</span>
+        </h2>
+        <a href="/" class="c-btn1 u-btn">Tìm hiểu thêm</a>
+    </div>
+</section>
+
+<section class="home6">
+    <div class="l-container">
+        <!-- Title cho mobile -->
+        <div class="home6__title only-sp">
+            <h2 class="c-title2">
+                5 LÝ DO LỰA CHỌN ĐẦU TƯ <br> TẠI <span>AKING VILLAGE</span>
+            </h2>
+        </div>
+
+        <!-- Main content -->
+        <div class="c-row js-slider3 js-slider3-3">
+            <!-- Title cho desktop -->
+            <div class="c-row__col only-pc">
+                <div class="c-content u-border">
+                    <div class="c-content__inner">
+                        <h3>5</h3>
+                        <h2>LÝ DO LỰA CHỌN <br> ĐẦU TƯ TẠI <br> AKING VILLAGE</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="c-row__col">
+                <div class="c-content u-boxshadow">
+                    <span class="c-number">1</span>
+                    <img src="assets/images/home6-1.svg" alt="Giải pháp đầu tư">
+                    <p class="custom">Cam kết mua lại đất giá trị tăng trưởng trung bình 20%/ năm + Thu nhập thụ động từ Farm 50 triệu +++/năm hoặc hơn theo đà tăng trưởng mạnh mẽ của mô hình BĐS nông nghiệp</p>
+                    <p class="only-sp d-none">Cam kết mua lại đất giá trị tăng trưởng</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="c-row__col">
+                <div class="c-content u-boxshadow">
+                    <span class="c-number">2</span>
+                    <img src="assets/images/home6-2.svg" alt="Giải pháp đầu tư">
+                    <p class="custom">Đầu tư thật, sản phẩm thật với quy trình pháp lý minh bạch rõ ràng theo quy định của pháp luật</p>
+                    <p class="only-sp d-none">Đầu tư thật, sản phẩm thật</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="c-row__col">
+                <div class="c-content u-boxshadow">
+                    <span class="c-number">3</span>
+                    <img src="assets/images/home6-3.svg" alt="Giải pháp đầu tư">
+                    <p class="custom">Quỹ đất đẹp, số lượng giới hạn</p>
+                    <p class="only-sp d-none">Quỹ đất đẹp, số lượng giới hạn</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="c-row__col">
+                <div class="c-content u-boxshadow">
+                    <span class="c-number">4</span>
+                    <img src="assets/images/home6-4.svg" alt="Giải pháp đầu tư">
+                    <p class="custom">Hỗ trợ chiến lược đầu tư từ các chuyên gia đầu ngành nông nghiệp và tài chính</p>
+                    <p class="only-sp d-none">Hỗ trợ chiến lược đầu tư</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="c-row__col">
+                <div class="c-content u-boxshadow">
+                    <span class="c-number">5</span>
+                    <img src="assets/images/home6-5.svg" alt="Giải pháp đầu tư">
+                    <p class="custom">Cơ hội tham gia cộng đồng những nhà đầu tư nông nghiệp uy tín, vững mạnh, hỗ trợ nhau cùng phát triển bền vững, góp phần phát triển mô hình nông trại sinh thái xanh - sạch trên cả nước.</p>
+                    <p class="only-sp d-none">Cơ hội tham gia cộng đồng</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom section -->
+        <div class="home6__bottom">
+            <h3 class="c-title2">
+                HÃY LÀ <span>150 NGƯỜI</span> THAM GIA CÙNG CHÚNG TÔI. CỘNG ĐỒNG ĐẦU TƯ GIỚI HẠN VÀ CÙNG HỆ GIÁ TRỊ
+            </h3>
+            <a href="/" class="c-btn2 u-btn">Chớp thời cơ ngay</a>
+        </div>
+    </div>
+</section>
+
+<section class="home7">
+    <div class="l-container">
+        <div class="home7__inner">
+            <!-- Title -->
+            <h2 class="c-title2">TRỞ THÀNH ĐỐI TÁC CHIẾN LƯỢC CỦA</h2>
+            <h3 class="c-title1">AKING VILLAGE</h3>
+ 
+            <!-- Form -->
+            <form id="strategicPartnershipForm" action="/strategic-partnership" method="POST" class="c-form">
+                <!-- Hidden token -->
+                <input type="hidden" name="_token" value="">
+ 
+                <!-- Gender & Name group -->
+                <div class="c-form__group">
+                    <div class="w-50 input-wrapper">
+                        <select class="c-form__input u--select" name="gender" required>
+                            <option value="" selected disabled>Anh / Chị</option>
+                            <option value="Anh">Anh</option>
+                            <option value="Chị">Chị</option>
+                        </select>
+                    </div>
+                    <div class="w-50 input-wrapper">
+                        <input class="c-form__input" name="name" type="text" placeholder="Họ và tên">
+                    </div>
+                </div>
+ 
+                <!-- Phone & Email group -->
+                <div class="c-form__group">
+                    <div class="w-50 input-wrapper">
+                        <input class="c-form__input" name="phone" type="number" placeholder="Số điện thoại">
+                    </div>
+                    <div class="w-50 input-wrapper">
+                        <input class="c-form__input" name="email" type="email" placeholder="Email">
+                    </div>
+                </div>
+ 
+                <!-- Comment group -->
+                <div class="c-form__group">
+                    <textarea class="c-form__input u--textarea" name="content" cols="30" rows="7" placeholder="Ý kiến của quý khách"></textarea>
+                </div>
+ 
+                <!-- Submit button -->
+                <button type="submit" class="c-btn2 u-btn">Gửi thông tin</button>
+            </form>
+ 
+        </div>
+    </div>
+ </section>
 @endsection

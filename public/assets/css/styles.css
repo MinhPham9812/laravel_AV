@@ -5,20 +5,6 @@
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }
 
-
-
-#main {
-    background-image: url("/assets/images/background.svg") !important;
-    background-repeat: no-repeat;
-    background-size: 1105px 972px;
-    background-position: bottom right;
-    z-index: -1; /* Đảm bảo background không che nội dung */
-}
-
-
-
-
-
 /* Header */
 :root{
     --header-height: 127px;
