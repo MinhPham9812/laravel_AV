@@ -1,6 +1,7 @@
 @import "aking_potential.css";
 @import "aking_roadmap.css";
 @import "aking_lionValue.css";
+@import "pineapple_villageModel.css";
 * {
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }

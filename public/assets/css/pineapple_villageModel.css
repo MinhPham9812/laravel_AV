@@ -1,0 +1,93 @@
+.pineapple1{
+    background: #fffae9;
+    padding: 48px 0;
+}
+
+.pineapple1 .c-row{
+    align-items: initial;
+}
+
+.pineapple1 .c-row__col{
+    width: 50%;
+}
+
+.pineapple1 .c-title2{
+    color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+    .pineapple1 .c-row__col{
+        width: 100%;
+    }
+}
+
+/* Styles pineapple2 */
+.pineapple2{
+    padding: 114px 0 0;
+    position: relative;
+}
+
+.pineapple2::before{
+    content: "";
+    background-image: url("../images/pineapple/modelBk1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: -15%;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+
+.pineapple2 .c-row__col--img{
+    background-image: url('../images/pineapple/modelBanner2.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    border-radius: 60px;
+}
+
+.pineapple2 .c-row{
+    align-items: initial;
+    justify-content: initial;
+}
+
+.pineapple2 .c-row__col{
+    width: 50%;
+}
+
+@media (min-width: 1025px){
+    .pineapple2 .c-row--inner{
+        max-width: 1318px;
+        margin: 0 auto;
+    }
+}
+
+/* Cột bên phải */
+.pineapple2 .c-row__col--right .c-row{
+    margin: 0;
+}
+
+.pineapple2 .c-row__col--right .c-row__col{
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    flex: 1 1 auto;
+    width: calc(50% - 30px);
+    padding: 20px;
+    margin: 0 15px 30px;
+}
+
+.pineapple2 .c-row__col--right .c-row__col:last-child{
+    margin-bottom: 0;
+}
+
+.pineapple2 .c-row__col--right .c-subtitle{
+    margin-bottom: 18px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.pineapple2 .c-row__col--right .c-desc{
+    text-align: left;
+}
