@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('tab-news')
-    <x-slider class="slider--news">
+    <x-breadcrumb class="breadcrumb--news">
         @slot('title')
             TIN TỨC
         @endslot
-    </x-slider>
+    </x-breadcrumb>
 
     @component('components.tabs', [
         'class' => 'tabs--news',

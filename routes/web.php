@@ -41,3 +41,7 @@ Route::get('/aking-roadmap', function (){
 Route::get('/aking-lion-value', function (){
     return view('akingVillage.aking-lionValue');
 });
+
+Route::get('/pineapple-village-model', function (){
+    return view('pineappleVillage.pineapple-villageModel');
+});

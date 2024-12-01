@@ -34,6 +34,8 @@
         @elseif(Request::is('aking-general*') || Request::is('aking-potential*') || 
         Request::is('aking-roadmap*') || Request::is('aking-lion-value*') )  {{-- Thêm * để bắt tất cả các route con của aking --}}
             @yield('tab-aking')
+        @elseif(Request::is('pineapple-village-model*'))
+            @yield('tab-pineapple')
         @elseif(Request::is('news*') || Request::is('newsProject*') || Request::is('notificationPage*') || Request::is('event*'))
             @yield('tab-news')
         @endif

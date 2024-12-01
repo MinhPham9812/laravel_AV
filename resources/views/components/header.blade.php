@@ -21,7 +21,7 @@
             <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__menu-item"><a href="{{ url('/aking-general') }}" class="header__menu-link">ANKING VILLAGE</a></li>
-                    <li class="header__menu-item"><a href="" class="header__menu-link">DỰ ÁN LÀNG DỨA</a></li>
+                    <li class="header__menu-item"><a href="{{ url('/pineapple-village-model') }}" class="header__menu-link">DỰ ÁN LÀNG DỨA</a></li>
                     <li class="header__menu-item"><a href="" class="header__menu-link">ĐẦU TƯ FARM</a></li>
                     <li class="header__menu-item"><a href="" class="header__menu-link">HỘI THẢO ĐẦU TƯ</a></li>
                     <li class="header__menu-item"><a href="{{ url('/news') }}" class="header__menu-link">TIN TỨC</a></li>

@@ -3,14 +3,14 @@
 @section('title', 'Trang Chủ')
 
 @section('home')
-<x-slider class="slider--home" tag="h2">
+<x-breadcrumb class="breadcrumb--home" tag="h2">
     @slot('title')
         MÔ HÌNH ĐẦU TƯ & KHAI THÁC BẤT ĐỘNG SẢN NÔNG NGHIỆP
     @endslot
-    <h3 class="slider__subtitle">
+    <h3 class="breadcrumb__subtitle">
         Dẫn đầu xu hướng phát triển BĐS Nông nghiệp mới tại Việt Nam
     </h3>
-</x-slider>
+</x-breadcrumb>
 
 <section class="home1">
     <div class="l-container">

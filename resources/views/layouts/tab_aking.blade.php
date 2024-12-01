@@ -1,15 +1,15 @@
 @extends('layouts.master')
 
 @section('tab-aking')
-    <x-slider class="slider--aking">
+    <x-breadcrumb class="breadcrumb--aking">
         @slot('title')
             AKING VILLAGE
         @endslot
-        <p class="slider__subtitle">
+        <p class="breadcrumb__subtitle">
             MÔ HÌNH HỢP TÁC PHÁT TRIỂN VÌ MỘT NỀN <br> 
             NÔNG NGHIỆP XANH - SẠCH VÀ SINH LỜI BỀN VỮNG
         </p>
-    </x-slider>
+    </x-breadcrumb>
 
     @component('components.tabs', [
         'class' => 'tabs--aking',
