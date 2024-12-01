@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slidesPerView: 1,
             spaceBetween: 60,
             pagination: {
-                el: '.swiper-pagination', 
+                el: '.home1 .swiper-pagination', 
                 clickable: true,
             },
             loop: true,
@@ -125,21 +125,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
          // Thêm Swiper cho home2
         const home2Swiper = new Swiper(".home2 .swiper-base", {
-            slidesPerView: 1,
-            spaceBetween: 60,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            // Thêm navigation
+            slidesPerView: 1.3,
+            spaceBetween: 10,
             navigation: {
-                // Sử dụng custom navigation
-                prevEl: '.home2 .prev-slide',
-                nextEl: '.home2 .next-slide',
+                prevEl: '.home2 .js-showarrow .prev-slide',
+                nextEl: '.home2 .js-showarrow .next-slide',
             },
-            loop: true,
+            loop: false,
             speed: 800,
-            autoHeight: true
+            autoHeight: true,
+            breakpoints: {
+                // >= 1024px (desktop)
+                1024: {
+                    centeredSlides: false,
+                },
+                // < 1024px (mobile)
+                0: {
+                    centeredSlides: true,
+                }
+            }
         });
     }
 });
+

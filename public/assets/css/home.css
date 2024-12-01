@@ -47,9 +47,44 @@
     justify-content: flex-start; /* Căn trái thay vì center */
     padding-left: 30px; /* Căn lề trái để khớp với content */
     position: relative; /* Đảm bảo không bị position: absolute; của Swiper */
-    bottom: auto; /* Reset bottom của Swiper */
-    margin-top: 40px;
+    margin-top: 50px;
     margin-left: -20px;
+}
+
+@media (max-width: 1024px){
+    .home1{
+        padding: 30px 0 60px;
+    }
+
+    .home1 .c-row{
+        margin: 0;
+    }
+
+    .home1 .home1__image{
+        display: none;
+    }
+
+    .home1 .home1__content{
+        padding-top: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+    }
+
+    .home1 .home1__slide img{
+        margin: 18px auto 0;
+    }
+
+    .home1 p{
+        font-size: 1.4rem;
+        line-height: 26px;
+        margin: 23px 0;
+    }
+
+    .home1 .c-btn2{
+        margin-top: 20px;
+    }
 }
 
 /* style home2 */
@@ -73,6 +108,10 @@
     }
 }
 
+.home2 .c-row{
+    margin: 0;
+}
+
 .home2 .c-row__col{
     width: 50%;
     padding: 0;
@@ -81,12 +120,6 @@
 .home2 .c-row__col:first-child{
     width: 50%;
     padding-right: 98px;
-}
-
-@media (min-width: 1024px) and (max-width: 1400px) {
-    .home2 .c-row__col:first-child {
-        padding-right: 40px;
-    }
 }
 
 .home2 .c-title1 {
@@ -109,6 +142,34 @@
 
 .home2 .js-showarrow .button-slider:hover{
     opacity: 0.5;
+}
+
+.home2 .swiper-wrapper {
+    display: flex;
+    flex-direction: row;   /* Đảm bảo slides xếp theo hàng ngang */
+}
+
+.home2 .swiper-slide {
+    width: 80%;           /* Width của slide chính */
+    margin-right: 20%;    /* Khoảng cách với slide kế tiếp */
+}
+
+/* Ẩn slide trước đó */
+.home2 .swiper-slide-prev {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Hiển thị một phần slide tiếp theo */
+.home2 .swiper-slide-next {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Disable các nút khi ở slide đầu/cuối */
+.home2 .swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Cột slider bên phải */
@@ -204,6 +265,53 @@
     visibility: visible;
 }
 
+@media (min-width: 1401px) and (max-width: 1700px) {
+    .home2 .home2__inner {
+        padding: 100px 0 100px 30px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .home2 .home2__inner {
+        padding: 80px 0 80px 30px;
+    }
+
+    .home2 .c-row__col:first-child {
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home2 .home2__inner {
+        padding: 76px 20px 112px;
+    }
+
+    .home2 .c-row__col:first-child {
+        width: 100%;
+        padding-right: 0;
+    }
+
+
+    .home2 .home2__slider {
+        width: 100vw;  /* Full viewport width */
+        margin-left: -14vw;
+        margin-top: 30px;
+    }
+
+    .home2 .swiper-slide {
+        width: 100vw;  /* Full viewport width */
+        padding: 0 20px;  /* Thêm padding hai bên */
+    }
+
+    .home2 .home2__slide {
+        width: 100%;  /* Full width của parent */
+        margin: 0;  /* Reset margins */
+        border-radius: 30px;
+    }
+}
+
+
+
 /* Style home3 */
 .home3{
     background-image: url("../images/homeBk2.svg");
@@ -224,6 +332,18 @@
 @media (min-width: 1401px) and (max-width: 1700px) {
     .home3 .home3__inner {
         padding: 250px 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .home3 .home3__inner {
+        padding: 150px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home3 .home3__inner {
+        padding: 50px 0 85px;
     }
 }
 .home3 .c-title1{
@@ -293,6 +413,31 @@
     font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+    .home4 {
+        padding: 35px 0;
+    }
+
+    .home4__content .c-title2{
+        font-size: 3rem;
+        line-height: 36px;
+        text-align: left;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home4__content .c-title2{
+        font-size: 2rem;
+        line-height: 28px;
+    }
+    .home4__content .c-row__col {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
+
 /* Style home5 */
 .home5 {
     min-height: 540px;
@@ -308,11 +453,50 @@
     flex-direction: column;
 }
 
+.home5 .c-title2{
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #dfcf9c
+}
+
+
 .home5 .c-title2 span {
     display: block;
     font-size: 3.5rem;
     line-height: 42px;
     color: #EEEBE2;
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .home5 .c-title2 {
+        font-size: 3rem;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home5 {
+        min-height: 100%;
+        padding: 100px 0;
+        background-position: 100%;
+    }
+
+    .home5 .c-title2 {
+        margin-bottom: 40px;
+        font-size: 3rem;
+        line-height: 38px;
+    }
+
+    .home5 .c-title2 span {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home5{
+        background-position: center center;
+    }
 }
 
 /* Style home6 */
@@ -461,15 +645,96 @@
     color: var(--primary);
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
-    .home6__bottom .c-title2 span{
-        font-size: 4rem;
-    }
-}
-
 .home6__bottom .u-btn:hover{
     opacity: 0.8;
     color: #fff;
+}
+
+/* Title sp */
+.home6 .home6__title .c-title2{
+    line-height: 30px;
+}
+
+.home6 .home6__title .c-title2 span{
+    color: var(--primary);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .home6 {
+        padding: 50px 0 48px;
+    }
+
+    .home6 .home6__title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .home6 .c-row{
+        justify-content: center;
+    }
+
+    .home6 .c-row__col {
+        width: 40vw;      /* Chiều rộng mỗi card */
+        flex: 0 0 auto;   /* Không co giãn */
+        padding: 15px;
+        margin-bottom: 0;
+    }
+
+    /* Điều chỉnh card style */
+    .home6 .c-content {
+        border-radius: 30px;
+    }
+
+    .home6 .c-content img {
+        border-radius: 30px;
+    }
+
+    .home6 .c-content p {
+        min-height: 62px;
+        padding: 0 8px 13px;
+        font-size: 1.6rem;
+        line-height: 22px;
+        border-radius: 0 0 30px 30px;
+        text-align: center;
+    }
+
+    .home6 .c-number {
+        width: 36px;
+        height: 58px;
+        font-size: 3rem;
+        line-height: 52px;
+        left: -5px;
+        top: -12px;
+    }
+
+    /* Ẩn text dài, hiện text ngắn trên mobile */
+    .home6 .c-content p.custom {
+        display: none;
+    }
+
+    .home6 .c-content p.only-sp {
+        display: block !important;
+    }
+
+    /* Bottom section */
+    .home6__bottom {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .home6__bottom .c-title2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        line-height: 24px;
+    }
+
+    .home6__bottom .c-title2 span {
+        font-size: 4rem;
+        display: block;
+        margin: 10px 0;
+    }
 }
 
 /* Style home7 */
@@ -491,35 +756,25 @@
     margin-bottom: 70px;
 }
 
-.c-form__group{
-    display: flex;
-    padding-bottom: 25px;
-    gap: 0 20px;
-    position: relative;
+.c-form .u--select option[value=""][disabled] {
+    display: none;
 }
 
-.c-form__input{
-    background: #FFF;
-    border: 1px solid #1b332e;
-    border-radius: 10px;
-    font-family: "Encode Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 26px;
-    color: #1b332e;
-    padding: 20px 42px;
-    height: max-content;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.c-form .u--select {
+.c-form__input.u--select {
+    appearance: none;
     background-image: url('../images/icon-down.png');
     background-repeat: no-repeat;
     background-position: 95% 50%;
 }
 
-.c-form .u--select option[value=""][disabled] {
-    display: none;
+@media (max-width: 1024px){
+    .home7 {
+        padding: 35px 0 47px;
+        background-size: 1040px;
+    }
+
+    .home7__inner .c-title1{
+        margin-bottom: 17px;
+        color: var(--primary);
+    }
 }

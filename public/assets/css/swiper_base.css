@@ -8,21 +8,20 @@
 
 .swiper-slide {
     width: 100%; /* Đảm bảo slide chiếm toàn bộ chiều rộng */
-    position: relative; /* Đảm bảo positioning chính xác */
-    visibility: visible; /* Đảm bảo slide luôn visible */
 }
 
 .swiper-base {
-    overflow: hidden; /* Ngăn slides tràn ra ngoài */
     width: 100%; /* Đảm bảo swiper container có width đúng */
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px; /* Tạo không gian cho pagination */
-    padding-left: 20px;
 }
 
 .swiper-wrapper {
     height: auto;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .swiper-base .swiper-pagination {

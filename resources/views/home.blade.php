@@ -29,6 +29,7 @@
                             <div class="home1__slide">
                                 <h2 class="c-title1">AKING VILLAGE</h2>
                                 <h3 class="c-title2">MÔ HÌNH ĐẦU TƯ VÀ KHAI THÁC <br> BĐS NÔNG NGHIỆP CẢI TIẾN & AN TOÀN</h3>
+                                <img src="assets/images/homeBanner1.png" alt="Mô hình đầu tư" class="only-sp">
                                 <p>Lấy nông nghiệp xanh và vùng trồng làm giá trị cốt lỗi, phát triển BĐS nông nghiệp từ đó khai thác nông sản kết hợp mô hình du lịch làng sinh thái và F&amp;B, Aking Village hướng đến phát triển “Mô hình đầu tư Bất động sản Nông nghiệp và Nông sản” hiện đại mang lại giá trị bền vững, cơ chế đầu tư hoàn thiện cho nhà đầu tư, không những vậy còn tạo sinh kế cho người dân địa phương.</p>
                                 <a href="/" class="c-btn3 u-btnblue only-pc">
                                     Tìm hiểu thêm 
@@ -45,6 +46,7 @@
                             <div class="home1__slide">
                                 <h2 class="c-title1">AKING VILLAGE2</h2>
                                 <h3 class="c-title2">MÔ HÌNH ĐẦU TƯ VÀ KHAI THÁC <br> BĐS NÔNG NGHIỆP CẢI TIẾN & AN TOÀN</h3>
+                                <img src="assets/images/homeBanner1.png" alt="Mô hình đầu tư" class="only-sp">
                                 <p>Lấy nông nghiệp xanh và vùng trồng làm giá trị cốt lỗi, phát triển BĐS nông nghiệp từ đó khai thác nông sản kết hợp mô hình du lịch làng sinh thái và F&amp;B, Aking Village hướng đến phát triển “Mô hình đầu tư Bất động sản Nông nghiệp và Nông sản” hiện đại mang lại giá trị bền vững, cơ chế đầu tư hoàn thiện cho nhà đầu tư, không những vậy còn tạo sinh kế cho người dân địa phương.</p>
                                 <a href="/" class="c-btn3 u-btnblue only-pc">
                                     Tìm hiểu thêm 
@@ -61,6 +63,7 @@
                             <div class="home1__slide">
                                 <h2 class="c-title1">AKING VILLAGE3</h2>
                                 <h3 class="c-title2">MÔ HÌNH ĐẦU TƯ VÀ KHAI THÁC <br> BĐS NÔNG NGHIỆP CẢI TIẾN & AN TOÀN</h3>
+                                <img src="assets/images/homeBanner1.png" alt="Mô hình đầu tư" class="only-sp">
                                 <p>Lấy nông nghiệp xanh và vùng trồng làm giá trị cốt lỗi, phát triển BĐS nông nghiệp từ đó khai thác nông sản kết hợp mô hình du lịch làng sinh thái và F&amp;B, Aking Village hướng đến phát triển “Mô hình đầu tư Bất động sản Nông nghiệp và Nông sản” hiện đại mang lại giá trị bền vững, cơ chế đầu tư hoàn thiện cho nhà đầu tư, không những vậy còn tạo sinh kế cho người dân địa phương.</p>
                                 <a href="/" class="c-btn3 u-btnblue only-pc">
                                     Tìm hiểu thêm 
@@ -121,7 +124,7 @@
                         <div class="swiper-slide">
                             <div class="home2__slide">
                                 <img src="assets/images/homeBanner2.png" class="u-img home2__image" alt="Gia tăng hiệu suất vùng trồng">
-                                <div class="home2__title">Gia tăng hiệu suất <br> vùng trồng</div>
+                                <div class="home2__title">Gia tăng hiệu suất1 <br> vùng trồng</div>
                                 <p class="home2__text">Tạo ra lợi nhuận kép an toàn và dài hạn với giải pháp khai thác đất và sản xuất nông nghiệp mang lại giá trị kinh tế cao cho nhà đầu tư, cũng như góp phần phát triển mô hình nông trại sinh thái trên cả nước</p>
                             </div>
                         </div>
@@ -130,7 +133,7 @@
                         <div class="swiper-slide">
                             <div class="home2__slide">
                                 <img src="assets/images/homeBanner2.png" class="u-img" alt="Gia tăng hiệu suất vùng trồng">
-                                <div class="home2__title">Gia tăng hiệu suất <br> vùng trồng</div>
+                                <div class="home2__title">Gia tăng hiệu suất2 <br> vùng trồng</div>
                                 <p class="home2__text">Tạo ra lợi nhuận kép an toàn và dài hạn với giải pháp khai thác đất và sản xuất nông nghiệp mang lại giá trị kinh tế cao cho nhà đầu tư, cũng như góp phần phát triển mô hình nông trại sinh thái trên cả nước</p>
                             </div>
                         </div>
@@ -139,7 +142,7 @@
                         <div class="swiper-slide">
                             <div class="home2__slide">
                                 <img src="assets/images/homeBanner2.png" class="u-img" alt="Gia tăng hiệu suất vùng trồng">
-                                <div class="home2__title">Gia tăng hiệu suất <br> vùng trồng</div>
+                                <div class="home2__title">Gia tăng hiệu suất3 <br> vùng trồng</div>
                                 <p class="home2__text">Tạo ra lợi nhuận kép an toàn và dài hạn với giải pháp khai thác đất và sản xuất nông nghiệp mang lại giá trị kinh tế cao cho nhà đầu tư, cũng như góp phần phát triển mô hình nông trại sinh thái trên cả nước</p>
                             </div>
                         </div>
@@ -150,6 +153,7 @@
         </div>
     </div>
 </section>
+
 <section class="home3">
     <div class="l-container">
         <div class="home3__inner">
@@ -164,7 +168,7 @@
 <section class="home4">
     <div class="l-container">
         <div class="home4__content">
-            <h2 class="c-title2">TĂNG TRƯỞNG ĐẤT TRUNG BÌNH <span>20%</span> MỖI NĂM <br> THU NHẬP THỤ ĐỘNG TỪ FARM <span>50+++</span> TRIỆU/NĂM</h2>
+            <h2 class="c-title2">TĂNG TRƯỞNG ĐẤT TRUNG BÌNH <span>20%</span> MỖI NĂM THU NHẬP THỤ ĐỘNG TỪ FARM <span>50+++</span> TRIỆU/NĂM</h2>
             <div class="c-row">
                 <div class="c-row__col">
                     <div class="u-center">
