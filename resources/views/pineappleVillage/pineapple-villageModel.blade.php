@@ -144,13 +144,12 @@
                 </figure>
             </div>
             <div class="c-row__col c-row__col--right">
-                <div class="c-row js-slider7">
+                <div class="c-row">
                     <div class="c-row__col only-sp">
                         <figure>
                             <img src="assets/images/pineapple/modelBanner3.svg" alt="Tự tay thu hoạch những trái Dứa chín căng mọng" class="u-img">
                             <figcaption>
                                 <span class="custom">Tự tay thu hoạch những trái Dứa chín căng mọng</span>
-                                <span class="only-sp d-none">Tự tay thu hoạch những trái Dứa chín căng mọng</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -159,7 +158,6 @@
                             <img src="assets/images/pineapple/modelBanner4.svg" alt="Tự tay thu hoạch những trái Dứa chín căng mọng" class="u-img">
                             <figcaption>
                                 <span class="custom">Thưởng thức những món ăn dân dã đồng quê ngay trong sân vườn</span>
-                                <span class="only-sp d-none">Thưởng thức những mó...</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -168,7 +166,6 @@
                             <img src="assets/images/pineapple/modelBanner5.svg" alt="Tự tay thu hoạch những trái Dứa chín căng mọng" class="u-img">
                             <figcaption>
                                 <span class="custom">Thời gian quý giá khám phá thiên nhiên, quay về với đồng ruộng và những ký ức tuổi thơ</span>
-                                <span class="only-sp d-none">Thời gian quý giá kh...</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -177,7 +174,6 @@
                             <img src="assets/images/pineapple/modelBanner6.svg" alt="Tự tay thu hoạch những trái Dứa chín căng mọng" class="u-img">
                             <figcaption>
                                 <span class="custom">Làm bạn cùng những người nông dân hiền lành, chất phác</span>
-                                <span class="only-sp d-none">Làm bạn cùng những n...</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -186,12 +182,20 @@
                             <img src="assets/images/pineapple/modelBanner7.svg" alt="Tự tay thu hoạch những trái Dứa chín căng mọng" class="u-img">
                             <figcaption>
                                 <span class="custom">Thoải mái, tự do như thăm vườn nhà mình sau bao ngày làm việc vất vả</span>
-                                <span class="only-sp d-none">Thoải mái, tự do như...</span>
                             </figcaption>
                         </figure>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="pineapple4">
+    <div class="l-container">
+        <div class="pineapple4__bottom u-center">
+            <h3 class="c-title1">MÔ HÌNH LÀNG DỨA <span>AKING FARM</span></h3>
+            <img src="assets/images/pineapple/modelBanner8.svg" alt="Mô hình làng dứa Aking Farm" class="u-img">
         </div>
     </div>
 </section>
