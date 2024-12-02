@@ -38,7 +38,7 @@ a:hover {
     opacity: 0.8;
 }
 
-section{
+section {
     padding: 50px 0 90px;
 }
 
@@ -47,6 +47,13 @@ section{
     width: 100%;
     margin: 0 auto;
     padding: 0 30px;
+}
+
+@media (max-width: 1024px) {
+    .l-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
 
 p {
@@ -74,13 +81,17 @@ p {
     }
 }
 
-.c-btn1{
+.c-btn1 {
     color: #1b332e;
     background: #fff;
 }
 
-.c-btn2{
-    background: linear-gradient(90deg, #63a940 5.7%, rgba(167, 209, 76, 0) 274.75%);
+.c-btn2 {
+    background: linear-gradient(
+        90deg,
+        #63a940 5.7%,
+        rgba(167, 209, 76, 0) 274.75%
+    );
 }
 
 .c-btn3 {
@@ -141,15 +152,15 @@ p {
 } */
 
 @media (min-width: 1024px) and (max-width: 1400px) {
-  .c-title1 {
-      font-size: 3rem;
-      line-height: 36px;
-  }
+    .c-title1 {
+        font-size: 3rem;
+        line-height: 36px;
+    }
 
-  .c-title2 {
-      font-size: 2.5rem;
-      line-height: 36px;
-  }
+    .c-title2 {
+        font-size: 2.5rem;
+        line-height: 36px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -168,7 +179,7 @@ p {
         line-height: 24px;
     }
 
-    .c-subtitle{
+    .c-subtitle {
         font-size: 1.6rem;
         line-height: 24px;
         font-weight: 600;
@@ -229,21 +240,20 @@ p {
     }
 }
 
-
 .model__bullet,
 .roadmap__bullet {
     composes: c-dotitem;
 }
 
-.c-form__group{
+.c-form__group {
     display: flex;
     padding-bottom: 25px;
     gap: 0 20px;
     position: relative;
 }
 
-.c-form__input{
-    background: #FFF;
+.c-form__input {
+    background: #fff;
     border: 1px solid #1b332e;
     border-radius: 10px;
     font-family: "Encode Sans";
@@ -258,7 +268,6 @@ p {
     box-sizing: border-box;
 }
 
-
 @media (max-width: 1024px) {
     .c-form__input {
         font-size: 1.4rem;
@@ -266,11 +275,11 @@ p {
     }
 }
 
-.u-center{
+.u-center {
     text-align: center;
 }
 
-.u-italic{
+.u-italic {
     font-style: italic;
     font-weight: 600;
 }
@@ -293,7 +302,7 @@ p {
     transition: all 0.3s ease;
 }
 
-.u-img{
+.u-img {
     border-radius: 80px;
 }
 
@@ -316,8 +325,6 @@ p {
         padding: 20px 40px;
     }
 }
-
-
 
 .wrapper {
     max-width: 1460px;
