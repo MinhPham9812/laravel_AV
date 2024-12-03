@@ -7,27 +7,27 @@ Route::get('/', function () {
 });
 
 Route::get('/news', function () {
-    return view('news.index'); // Thay đổi đường dẫn
+    return view('news.index'); 
 });
 
 Route::get('/news-detail', function () {
-    return view('news.detail'); // Thay đổi đường dẫn
+    return view('news.detail'); 
 });
 
 Route::get('/newsProject', function () {
-    return view('news.project'); // Thay đổi đường dẫn
+    return view('news.project'); 
 });
 
 Route::get('/notificationPage', function () {
-    return view('news.notification'); // Thay đổi đường dẫn
+    return view('news.notification'); 
 });
 
 Route::get('/event', function () {
-    return view('news.event'); // Thay đổi đường dẫn
+    return view('news.event'); 
 });
 
 Route::get('/aking-general', function () {
-    return view('akingVillage.aking-general'); // Thay đổi đường dẫn
+    return view('akingVillage.aking-general'); 
 });
 
 Route::get('/aking-potential', function (){
@@ -44,4 +44,8 @@ Route::get('/aking-lion-value', function (){
 
 Route::get('/pineapple-village-model', function (){
     return view('pineappleVillage.pineapple-villageModel');
+});
+
+Route::get('/pineapple-village-location', function (){
+    return view('pineappleVillage.pineapple-villageLocation');
 });

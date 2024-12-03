@@ -17,13 +17,13 @@
             [
                 'route' => 'pineapple-village-model',
                 'label' => 'Mô hình Làng Dứa',
-                'arrow_right' => ''
+                'arrow_right' => 'pineapple-village-location'
             ],
             [
-                'route' => '',
+                'route' => 'pineapple-village-location',
                 'label' => 'Vị trí đắc địa',
-                'arrow_left' => '',
-                'arrow_right' => 'aking-roadmap'
+                'arrow_left' => 'pineapple-village-model',
+                'arrow_right' => ''
             ],
             [
                 'route' => '',
@@ -49,7 +49,9 @@
     <div class="tab-content">
         
         @if(Request::is('pineapple-village-model'))
-            @yield('pineapple-village-model')         
+            @yield('pineapple-village-model')   
+        @elseif(Request::is('pineapple-village-location'))
+            @yield('pineapple-village-location')       
         @endif
     </div>
 @endsection

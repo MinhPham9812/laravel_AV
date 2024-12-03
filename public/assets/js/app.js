@@ -146,5 +146,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    if (window.location.pathname.includes("pineapple-village-location")) {
+        const locationSwiper = new Swiper(".location__top .swiper-base", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.location__top .swiper-pagination', 
+                clickable: true,
+            },
+            loop: true,
+            speed: 800,
+            autoHeight: true
+        });
+    }
 });
 
