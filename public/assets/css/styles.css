@@ -582,7 +582,7 @@
 
 @media (max-width: 1050px) {
     .tabs {
-        margin: 0 auto 40px;
+        margin: 0 auto;
         padding: 0 20px;
         width: 94%;
     }

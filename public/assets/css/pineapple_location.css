@@ -84,3 +84,103 @@
         margin-top: 40px;
     }
 }
+
+/* Styles location__inner */
+.location .location__inner{
+    background-image: url('../images/pineapple/locationBk.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    color: #fff;
+    padding: 120px 80px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+} 
+
+.location .location__inner .c-title1 {
+    font-size: 5rem;
+    line-height: 60px;
+    margin-bottom: 50px;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+}
+
+.location .location__inner .c-title1 span{
+    color: #efd784;
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .location .location__inner .c-title1 {
+        font-size: 3rem;
+        line-height: 36px;
+    }
+}
+
+.location .location__inner .c-traveltime {
+    padding: 30px 98px 27px;
+    border-radius: 80px;
+    background-color: #63a940;
+}
+
+.location .location__inner .c-desc{
+    text-align: center;
+}
+
+.location .location__inner .c-traveltime .c-desc{
+    margin-top: 15px;
+}
+
+.location .location__inner .c-traveltime .mr-0{
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 1025px) {
+    .location .location__inner .c-traveltime .mr-0 {
+        margin-bottom: -20px !important;
+    }
+}
+
+.location .location__inner .c-desc--bottom{
+    margin-top: 35px;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .location .location__inner {
+        padding: 50px 20px;
+    }
+
+    .location .location__inner .c-title1 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 24px;
+        margin-bottom: 25px;
+    }
+
+    .location .location__inner .c-title1 br {
+        display: none;
+    }
+
+    .location .location__inner .c-traveltime {
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+
+    .location .location__inner .c-traveltime .c-desc:nth-child(1) {
+        order: 1;
+    }
+
+    .location .location__inner .c-traveltime .c-desc:nth-child(2) {
+        order: 3;
+        text-align: center;
+        width: 100%;
+    }
+
+    .location .location__inner .c-traveltime .c-desc:nth-child(3) {
+        order: 2;
+    }
+
+    .location .location__inner .c-traveltime .c-desc{
+        margin-top: 10px;
+    }
+}

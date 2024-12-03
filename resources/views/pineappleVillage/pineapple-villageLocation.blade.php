@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="location__inner" style="background-image: url('https://aking.ssaigon.com/storage/pages/pineapple-location/banner-22.jpg')">
+        <div class="location__inner">
             <h2 class="c-title1 u-center"> LÀNG DỨA <span>AKING FARM</span> <br> “ĐIỂM VÀNG </h2>
             <div class="c-traveltime">
                 <p class="c-desc mr-0">Thời gian di chuyển hiện tại: 3h25p</p>
