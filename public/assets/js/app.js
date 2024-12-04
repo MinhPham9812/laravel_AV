@@ -118,6 +118,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 el: '.home1 .swiper-pagination', 
                 clickable: true,
             },
+            autoplay: {
+                delay: 7000, // 2 seconds
+                disableOnInteraction: false, // Tiếp tục autoplay sau khi user tương tác
+            },
             loop: true,
             speed: 800,
             autoHeight: true
@@ -155,9 +159,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 el: '.location__top .swiper-pagination', 
                 clickable: true,
             },
+            autoplay: {
+                delay: 7000, // 2 seconds
+                disableOnInteraction: false, // Tiếp tục autoplay sau khi user tương tác
+            },
             loop: true,
             speed: 800,
             autoHeight: true
+        });
+    }
+
+    if (window.location.pathname.includes("pineapple-village-potential")) {
+        const locationSwiper = new Swiper(".potential2 .swiper-base", {
+                    spaceBetween: 30,
+                    loop: false,
+                    speed: 800,
+                    navigation: {
+                        prevEl: '.potential2 .prev-slide',
+                        nextEl: '.potential2 .next-slide',
+                    },
+            breakpoints: {
+                1025: {
+                    slidesPerView: 3,
+                },
+                0: {
+                    slidesPerView: 1,
+                }
+            }
         });
     }
 });

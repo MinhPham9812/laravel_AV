@@ -1,0 +1,443 @@
+.potential1{
+    padding: 0 0 90px;
+}
+
+.potential1 .c-row{
+    align-items: initial;
+}
+
+.potential1 .c-row__col--left{
+    width: 30%;
+}
+
+/* Cột trái */
+.potential1 figure{
+    position: relative;
+    color: #fff;
+    height: 100%;
+}
+
+.potential1 figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.potential1 figure figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 70px 53px;
+}
+
+.potential1 figure .c-subtitle{
+    margin: 5px 0 16px;
+}
+
+/* Cột phải */
+.potential1 .c-row__col--right{
+    width: 70%;
+    padding-left: 60px;
+}
+
+.potential1 .c-row__col--right .c-row{
+    margin-bottom: 46px;
+}
+
+.potential1 .c-row__col--right .c-row__col{
+    width: 33.3%;
+    text-align: center;
+}
+
+@media (min-width: 1025px) {
+    .potential1 .c-row__col--right .c-row__col img {
+        height: 239px;
+    }
+}
+
+.potential1 .c-row__col--right .c-row__col--inner {
+    text-align: left;
+}
+
+.potential1 .c-row__col--right .c-row__col p.c-subtitle {
+    margin: 15px 0 5px;
+}
+
+.potential1 .c-row__col--right .c-row__col .c-desc {
+    margin-bottom: 10px;
+}
+
+/* Styles potential2 */
+.potential2{
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.potential2::before{
+    content: "";
+    background-image: url('../images/pineapple/potentialBk1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: -20%;
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.5;
+}
+
+.potential2 .slider-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 60px 10px 0;
+
+}
+
+.potential2 .swiper-base {
+    flex: 1;
+    overflow: hidden;
+}
+
+.potential2 .swiper-slide{
+    opacity: 1;
+    visibility: visible;
+}
+
+.potential2 .button-slider {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.potential2 figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 60px;
+}
+
+.potential2 .button-slider.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+@media (max-width: 1024px) {
+    .potential2 figure{
+        width: 100%;
+    }
+}
+/* Styles potential3 */
+.potential3{
+    overflow: hidden;
+    padding: 0 0 80px;
+}
+
+.potential3 .c-row{
+    align-items: initial;
+    position: relative;
+    max-width: 1955px;
+    margin-left: auto;
+}
+
+.potential3 .c-row__col {
+    width: 50%;
+}
+
+/* Cột trái */
+.potential3 .c-row__col--left {
+    padding-top: 80px;
+}
+
+.potential3 .c-row__col--left .c-title1 {
+    margin-bottom: 28px;
+}
+
+@media (min-width: 1801px) and (max-width: 1900px) {
+    .potential3 .c-row__col--left {
+        padding-top: 50px;
+    }
+
+    .potential3 .c-row__col--left .c-title1 {
+        font-size: 6rem;
+        line-height: 68px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1800px) {
+    .potential3 .c-row__col--left {
+        width: 100%;
+        padding-left: 35px;
+        padding-right: 35px !important;
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .potential3 .c-row__col:first-child {
+        padding-right: 120px;
+    }
+}
+
+/* Cột phải */
+.potential3 .c-row__col--right img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+}
+
+@media (min-width: 1025px) and (max-width: 1800px) {
+    .potential3 .c-row__col--right {
+        width: 50%;
+        margin-left: auto;
+    }
+}
+
+/* Styles list */
+.potential3 .c-listdesc{
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--primary);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 80px;
+    padding: 30px 40px;
+    color: #fff;
+    position: absolute;
+    bottom: 50px;
+    right: 700px;
+    width: 50%;
+}
+
+@media (min-width: 1025px) and (max-width: 1800px) {
+    .potential3 .c-listdesc {
+        padding: 10px 40px;
+        bottom: 28px;
+        right: 80px;
+        left: 35px;
+        width: 80%;
+    }
+}
+
+.potential3 .c-listdesc dt,
+.potential3 .c-listdesc dd {
+    width: 50%;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+}
+
+.potential3 .c-listdesc dd{
+    border-left: 1px solid #fff;
+    padding-left: 40px;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.potential3 .c-listdesc dt:nth-last-child(2) {
+    border-bottom: 0;
+}
+
+.potential3 .c-listdesc dd:last-child {
+    border-bottom: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .potential3 .c-row__col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .potential3 .c-row__col--left {
+        padding: 0 35px 40px;
+    }
+
+    .potential3 .c-row__col--left .c-title1 {
+        font-size: 2rem;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .potential3 .c-row__col--right img {
+        border-radius: 0;
+        height: 700px;
+    }
+
+    .potential3 .c-listdesc {
+        left: 35px;
+        right: 35px;
+        bottom: 35px;
+        border-radius: 30px;
+        padding: 24px 20px;
+        width: auto;
+    }
+
+    .potential3 .c-listdesc dt,
+    .potential3 .c-listdesc dd{
+        padding: 8px;
+        font-size: 1.4rem;
+        line-height: 20px;
+    }
+
+    .potential3 .c-listdesc dd{
+        padding-left: 15px;
+    }
+}
+
+/* Style pontential4 */
+.potential4 {
+    padding-bottom: 40px;
+}
+
+/* Table styles */
+.potential4__inner {
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 60px;
+    padding: 30px 50px;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.potential4 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.potential4 table th {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 26px;
+    color: #63a940;
+    border-top: 0;
+    border-left: 0;
+}
+
+.potential4 table td {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 26px;
+    border-left: 0;
+}
+
+.potential4 th:first-child,
+.potential4 td:first-child {
+    border-left: 0;
+}
+
+.potential4 th:last-child {
+    border-top-right-radius: 30px;
+}
+
+.potential4 table td,
+.potential4 table th {
+    padding: 15px;
+    border-bottom: 1px solid #1b332e;
+    border-left: 1px solid #1b332e;
+}
+
+/* Highlight total row */
+.potential4 tr.total td {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+/* Footer styles */
+.potential4 table tfoot td {
+    border: 0;
+    padding-bottom: 0;
+}
+
+/* Bottom section */
+.potential4__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.potential4__bottom h3 {
+    width: 40%;
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.potential4__bottom h3 span{
+    display: block;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 58px;
+    color: var(--primary);
+    text-transform: initial;
+}
+
+.potential4__bottom--right {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.potential4__bottom--right p{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.potential4__bottom--right p+p {
+    border-top: 1px solid #1b332e;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+
+.potential4__bottom--right p span:last-child {
+    padding-left: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .potential4__inner,
+    .potential4__bottom {
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .potential4 table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .potential4__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .potential4__bottom h3 {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        text-align: left;
+        line-height: 26px;
+    }
+
+    .potential4__bottom--right {
+        width: 100%;
+        padding: 0;
+    }
+}

@@ -23,12 +23,12 @@
                 'route' => 'pineapple-village-location',
                 'label' => 'Vị trí đắc địa',
                 'arrow_left' => 'pineapple-village-model',
-                'arrow_right' => ''
+                'arrow_right' => 'pineapple-village-potential'
             ],
             [
-                'route' => '',
+                'route' => 'pineapple-village-potential',
                 'label' => 'Tiềm năng dứa Vĩnh Long',
-                'arrow_left' => '',
+                'arrow_left' => 'pineapple-village-location',
                 'arrow_right' => ''
             ],
             [
@@ -51,7 +51,9 @@
         @if(Request::is('pineapple-village-model'))
             @yield('pineapple-village-model')   
         @elseif(Request::is('pineapple-village-location'))
-            @yield('pineapple-village-location')       
+            @yield('pineapple-village-location') 
+        @elseif(Request::is('pineapple-village-potential'))
+            @yield('pineapple-village-potential')      
         @endif
     </div>
 @endsection

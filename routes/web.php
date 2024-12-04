@@ -49,3 +49,7 @@ Route::get('/pineapple-village-model', function (){
 Route::get('/pineapple-village-location', function (){
     return view('pineappleVillage.pineapple-villageLocation');
 });
+
+Route::get('/pineapple-village-potential', function (){
+    return view('pineappleVillage.pineapple-villagePotential');
+});

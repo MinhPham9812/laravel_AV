@@ -86,27 +86,7 @@ p {
     }
 }
 
-.c-btn1 {
-    color: #1b332e;
-    background: #fff;
-}
 
-.c-btn2 {
-    background: linear-gradient(
-        90deg,
-        #63a940 5.7%,
-        rgba(167, 209, 76, 0) 274.75%
-    );
-}
-
-.c-btn3 {
-    display: flex;
-    align-items: center;
-    font-family: "Encode Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.8rem;
-}
 
 .c-row {
     display: flex;
@@ -329,6 +309,28 @@ p {
         font-size: 1.4rem;
         padding: 20px 40px;
     }
+}
+
+.c-btn1 {
+    color: #1b332e;
+    background: #fff;
+}
+
+.c-btn2 {
+    background: linear-gradient(
+        90deg,
+        #63a940 5.7%,
+        rgba(167, 209, 76, 0) 274.75%
+    );
+}
+
+.c-btn3 {
+    display: flex;
+    align-items: center;
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
 }
 
 .wrapper {
