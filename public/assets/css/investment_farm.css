@@ -1,0 +1,248 @@
+.farm{
+    padding: 135px 0 80px;
+}
+
+.c-line1{
+    border: 0.5px solid var(--primary);
+    max-width: 1218px;
+    width: 100%;
+    margin: 70px auto 39px;
+}
+
+.c-block2{
+    margin-bottom: 55px;
+}
+
+.c-block2__title {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 58px;
+    text-align: center;
+    color: #1b332e;
+    margin-bottom: 39px;
+}
+
+.c-block2__txt {
+    font-family: "Barlow";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 26px;
+    color: #1b332e;
+}
+
+.c-block2__txt1 {
+    font-family: "Encode Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.c-block2__txt3 {
+    color: var(--primary);
+}
+
+.c-block2__list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.c-block2__item {
+    position: relative;
+    padding-left: 73px;
+}
+
+.c-block2__item:not(:last-child) {
+    margin-bottom: 33px;
+}
+
+.c-block2__item::before, .c-block2__item::after {
+    content: "";
+    position: absolute;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.c-block2__item::before {
+    width: 47px;
+    height: 47px;
+    left: 0;
+    top: -10px;
+    opacity: 0.3;
+}
+
+.c-block2__item::after {
+    left: 14px;
+    top: 5px;
+    width: 17px;
+    height: 17px;
+}
+
+.c-block3{
+    background-image: url('../images/farm/farmBk.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.c-block3__inner{
+    padding: 146px 102px;
+}
+
+.c-block3__title {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 58px;
+    color: #eeebe2;
+}
+
+.c-block3__title span {
+    color: #dfcf9c;
+}
+
+.form {
+    background-color: #fffae9;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 127px;
+    padding-bottom: 101px;
+}
+
+.form__title {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 58px;
+    text-align: center;
+    color: #1b332e;
+    max-width: 945px;
+    width: 100%;
+    margin: 0 auto 48px;
+}
+
+.form__title .u-txt1 {
+    color: var(--primary);
+}
+
+.form .c-form {
+    max-width: 890px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .farm {
+        padding-top: 80px;
+    }
+
+    .c-block2__title {
+        font-size: 4rem;
+    }
+
+    .c-block3__inner {
+        padding: 100px 50px;
+    }
+
+    .c-block3__title {
+        font-size: 4rem;
+        line-height: 50px;
+    }
+
+    .form__title {
+        font-size: 4rem;
+        line-height: 50px;
+    }
+
+    .form .c-btn2 {
+        margin-top: 33px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .p-farm {
+        padding: 40px 0;
+    }
+
+    .c-line1 {
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .c-block2 {
+        margin-bottom: 30px;
+    }
+
+    .c-block2__title {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .c-block2__item {
+        padding-left: 40px;
+    }
+
+    .c-block2__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .c-block2__item::before {
+        width: 30px;
+        height: 30px;
+        top: 0;
+    }
+
+    .c-block2__item::after {
+        left: 10px;
+        top: 10px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .c-block2__txt {
+        font-size: 1.6rem;
+    }
+
+    .c-block2__txt1 {
+        font-size: 1.8rem;
+    }
+
+    .c-block3 {
+        border-radius: 30px;
+    }
+
+    .c-block3__inner {
+        padding: 40px 20px;
+    }
+
+    .c-block3__title {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .form {
+        padding: 40px 0;
+    }
+
+    .form__title {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .form .c-form{
+        max-width: 100%;
+    }
+}

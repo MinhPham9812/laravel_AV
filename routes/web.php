@@ -53,3 +53,11 @@ Route::get('/pineapple-village-location', function (){
 Route::get('/pineapple-village-potential', function (){
     return view('pineappleVillage.pineapple-villagePotential');
 });
+
+Route::get('/pineapple-village-adviser', function (){
+    return view('pineappleVillage.pineapple-villageAdviser');
+});
+
+Route::get('/investment-farm', function (){
+    return view('investmentFarm');
+});

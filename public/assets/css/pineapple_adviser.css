@@ -1,0 +1,56 @@
+.advisoryboard{
+    background-image: url('../images/pineapple/adviserBk.svg');
+    background-repeat: no-repeat;
+    background-position: 100% bottom;
+    background-size: contain;
+    background-color: #fffae9;
+    padding: 168px 0 400px;
+    overflow: hidden;
+}
+
+.advisoryboard .c-row{
+    align-items: initial;
+}
+
+.advisoryboard .c-row__col{
+    flex: 0 0 30%;
+    text-align: center;
+}
+
+.advisoryboard figure img{
+    border-radius: 30px;
+}
+
+.advisoryboard figure figcaption{
+    margin-top: 20px;
+}
+
+.advisoryboard figure figcaption .c-subtitle{
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+
+.advisoryboard figure figcaption .text-left{
+    text-align: left;
+    margin-top: 20px;
+}
+
+.advisoryboard figure figcaption .text-left span{
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .advisoryboard {
+        padding: 35px 0;
+    }
+}
+
+@media (max-width: 767px){
+    .advisoryboard .c-row__col{
+        width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+}
+

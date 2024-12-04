@@ -29,18 +29,18 @@
                 'route' => 'pineapple-village-potential',
                 'label' => 'Tiềm năng dứa Vĩnh Long',
                 'arrow_left' => 'pineapple-village-location',
-                'arrow_right' => ''
+                'arrow_right' => '/'
             ],
             [
-                'route' => '',
+                'route' => '/',
                 'label' => 'Tiến độ dự án',
-                'arrow_left' => '',
-                'arrow_right' => ''
+                'arrow_left' => 'pineapple-village-potential',
+                'arrow_right' => 'pineapple-village-adviser'
             ],
             [
-                'route' => '',
+                'route' => 'pineapple-village-adviser',
                 'label' => 'Ban cố vấn chuyên môn',
-                'arrow_left' => ''
+                'arrow_left' => '/'
             ]
         ]
     ])
@@ -53,7 +53,9 @@
         @elseif(Request::is('pineapple-village-location'))
             @yield('pineapple-village-location') 
         @elseif(Request::is('pineapple-village-potential'))
-            @yield('pineapple-village-potential')      
+            @yield('pineapple-village-potential')  
+        @elseif(Request::is('pineapple-village-adviser'))
+            @yield('pineapple-village-adviser')     
         @endif
     </div>
 @endsection

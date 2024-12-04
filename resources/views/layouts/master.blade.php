@@ -37,8 +37,11 @@
         @elseif(Request::is('aking-general*') || Request::is('aking-potential*') || 
         Request::is('aking-roadmap*') || Request::is('aking-lion-value*') )  {{-- Thêm * để bắt tất cả các route con của aking --}}
             @yield('tab-aking')
-        @elseif(Request::is('pineapple-village-model*') || Request::is('pineapple-village-location*') || Request::is('pineapple-village-potential*'))
+        @elseif(Request::is('pineapple-village-model*') || Request::is('pineapple-village-location*') || Request::is('pineapple-village-potential*')
+        || Request::is('pineapple-village-adviser*'))
             @yield('tab-pineapple')
+        @elseif(Request::is('investment-farm'))
+            @yield('investment-farm')
         @elseif(Request::is('news*') || Request::is('newsProject*') || Request::is('notificationPage*') || Request::is('event*'))
             @yield('tab-news')
         @endif

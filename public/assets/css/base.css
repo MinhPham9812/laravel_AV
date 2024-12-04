@@ -86,7 +86,9 @@ p {
     }
 }
 
-
+.c-img1{
+    pointer-events: none;
+}
 
 .c-row {
     display: flex;
@@ -182,6 +184,7 @@ p {
         line-height: 1.5;
     }
 }
+
 
 .c-dotitem {
     position: relative;
