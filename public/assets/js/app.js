@@ -188,5 +188,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    if (window.location.pathname.includes("investment-seminar")) {
+        const speakerSwiper = new Swiper(".seminar3 .swiper-base", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            pagination: {
+                el: '.seminar3 .swiper-pagination',
+                clickable: true
+            },
+            autoplay: {
+                delay: 7000, // 2 seconds
+                disableOnInteraction: false, // Tiếp tục autoplay sau khi user tương tác
+            },
+            autoHeight: true
+        });
+    }
 });
 

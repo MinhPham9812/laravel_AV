@@ -61,3 +61,7 @@ Route::get('/pineapple-village-adviser', function (){
 Route::get('/investment-farm', function (){
     return view('investmentFarm');
 });
+
+Route::get('/investment-seminar', function (){
+    return view('investmentSeminar');
+});

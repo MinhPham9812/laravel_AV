@@ -42,6 +42,8 @@
             @yield('tab-pineapple')
         @elseif(Request::is('investment-farm'))
             @yield('investment-farm')
+         @elseif(Request::is('investment-seminar'))
+            @yield('investment-seminar')
         @elseif(Request::is('news*') || Request::is('newsProject*') || Request::is('notificationPage*') || Request::is('event*'))
             @yield('tab-news')
         @endif

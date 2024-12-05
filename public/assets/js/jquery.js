@@ -117,3 +117,22 @@ $(document).ready(function () {
         $(tabId).show();
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Lấy tất cả các figure trong seminar1
+    const figures = document.querySelectorAll('.seminar1 .seminar1__inner figure');
+
+    // Xử lý sự kiện cho từng figure
+    figures.forEach(figure => {
+        figure.addEventListener('mouseenter', () => {
+            // Đầu tiên, xóa class is-active của tất cả figures khác
+            figures.forEach(otherFigure => {
+                if (otherFigure !== figure) {
+                    otherFigure.classList.remove('is-active');
+                }
+            });
+            // Thêm class is-active cho figure đang hover
+            figure.classList.add('is-active');
+        });
+    });
+});

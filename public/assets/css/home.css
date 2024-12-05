@@ -20,7 +20,7 @@
     transition: all 0.3s ease;
 }
 
-/* Normal state - màu trắng */
+
 .c-btn3 path[stroke] {
     stroke: var(--primary); /* Màu cho border của circle */
 }

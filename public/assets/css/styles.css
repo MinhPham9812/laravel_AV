@@ -6,6 +6,7 @@
 @import "pineapple_potential.css";
 @import "pineapple_adviser.css";
 @import "investment_farm.css";
+@import "investment_serminar.css";
 * {
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }
@@ -330,7 +331,7 @@
 
 /* Nội dung của breadcrumb */
 .breadcrumb__content {
-    color: #eeebe2;
+    color: #fff;
     max-width: 512px;
     margin-right: auto;
 }
@@ -399,6 +400,18 @@
     background-image: url("../images/farmBreadcrumb.svg");
     padding: 159px 0 136px;
 }
+
+/* Breadcrumb--serminar */
+.breadcrumb--seminar {
+    background-image: url("../images/seminarBreadcrumb.svg");
+    padding: 159px 0 136px;
+}
+
+.breadcrumb--seminar .breadcrumb__content{
+    max-width: 586px;
+}
+
+
 
 @media (min-width: 1024px) and (max-width: 1400px) {
     .breadcrumb--home .breadcrumb__title {
