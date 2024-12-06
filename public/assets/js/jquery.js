@@ -61,16 +61,18 @@ $(document).ready(function () {
     adjustLayout();
     $(window).resize(adjustLayout);
 
-    // Mở sidebar khi nhấn nút nav-bars-btn
+    // Mở sidebar khi nhấn nút bars-btn
     $(".header__bars-btn").click(function () {
         $(".header__mobile").addClass("active");
         $(".header__overlay").fadeIn();
+        $("body").addClass("body--no-scroll");
     });
 
-    // Đóng sidebar khi nhấn vào nút close hoặc overlay
+    // Click close button hoặc overlay để đóng menu
     $(".header__mobile-close, .header__overlay").click(function () {
         $(".header__mobile").removeClass("active");
         $(".header__overlay").fadeOut();
+        $("body").removeClass("body--no-scroll");
     });
 
     // Xử lý scrollToTop
@@ -118,21 +120,23 @@ $(document).ready(function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Lấy tất cả các figure trong seminar1
-    const figures = document.querySelectorAll('.seminar1 .seminar1__inner figure');
+    const figures = document.querySelectorAll(
+        ".seminar1 .seminar1__inner figure"
+    );
 
     // Xử lý sự kiện cho từng figure
-    figures.forEach(figure => {
-        figure.addEventListener('mouseenter', () => {
+    figures.forEach((figure) => {
+        figure.addEventListener("mouseenter", () => {
             // Đầu tiên, xóa class is-active của tất cả figures khác
-            figures.forEach(otherFigure => {
+            figures.forEach((otherFigure) => {
                 if (otherFigure !== figure) {
-                    otherFigure.classList.remove('is-active');
+                    otherFigure.classList.remove("is-active");
                 }
             });
             // Thêm class is-active cho figure đang hover
-            figure.classList.add('is-active');
+            figure.classList.add("is-active");
         });
     });
 });

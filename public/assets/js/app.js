@@ -76,23 +76,23 @@ document.addEventListener("DOMContentLoaded", function () {
             loop: true, // Bật loop để có thể quay lại slide 1
             speed: 800,
             on: {
-                slideChange: function() {
+                slideChange: function () {
                     const activeIndex = this.realIndex; // Sử dụng realIndex thay vì activeIndex khi có loop
                     const totalSlides = this.slides.length - 2; // Trừ 2 slides clone khi loop
                     const lastBulletIndex = Math.ceil(totalSlides / 2) - 1;
-    
+
                     // Logic cho bullet cuối
                     if (this.clickedIndex === lastBulletIndex) {
                         // Hiển thị slides 5 và 1
                         this.slideTo(totalSlides - 1); // Slide to slide 5
                     }
                 },
-                init: function() {
+                init: function () {
                     // Thêm bullet thứ 5
                     const totalBullets = 5;
                     this.pagination.render();
                     this.pagination.update();
-                }
+                },
             },
             // Đảm bảo slides 5 và 1 hiển thị cùng nhau khi click vào bullet cuối
             loopedSlides: 1,
@@ -104,18 +104,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Mặc định cho màn hình < 1024px
                 0: {
                     slidesPerView: 1,
-                }
-            }
+                },
+            },
         });
     }
 
-    if (window.location.pathname === "/" || window.location.pathname.includes("/home")) {
+    if (
+        window.location.pathname === "/" ||
+        window.location.pathname.includes("/home")
+    ) {
         // Thêm Swiper cho home1
         const home1Swiper = new Swiper(".home1 .swiper-base", {
             slidesPerView: 1,
             spaceBetween: 60,
             pagination: {
-                el: '.home1 .swiper-pagination', 
+                el: ".home1 .swiper-pagination",
                 clickable: true,
             },
             autoplay: {
@@ -124,16 +127,16 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             loop: true,
             speed: 800,
-            autoHeight: true
+            autoHeight: true,
         });
 
-         // Thêm Swiper cho home2
+        // Thêm Swiper cho home2
         const home2Swiper = new Swiper(".home2 .swiper-base", {
             slidesPerView: 1.3,
             spaceBetween: 10,
             navigation: {
-                prevEl: '.home2 .js-showarrow .prev-slide',
-                nextEl: '.home2 .js-showarrow .next-slide',
+                prevEl: ".home2 .js-showarrow .prev-slide",
+                nextEl: ".home2 .js-showarrow .next-slide",
             },
             loop: false,
             speed: 800,
@@ -146,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // < 1024px (mobile)
                 0: {
                     centeredSlides: true,
-                }
-            }
+                },
+            },
         });
     }
 
@@ -156,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
-                el: '.location__top .swiper-pagination', 
+                el: ".location__top .swiper-pagination",
                 clickable: true,
             },
             autoplay: {
@@ -165,46 +168,64 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             loop: true,
             speed: 800,
-            autoHeight: true
+            autoHeight: true,
         });
     }
 
     if (window.location.pathname.includes("pineapple-village-potential")) {
-        const locationSwiper = new Swiper(".potential2 .swiper-base", {
-                    spaceBetween: 30,
-                    loop: false,
-                    speed: 800,
-                    navigation: {
-                        prevEl: '.potential2 .prev-slide',
-                        nextEl: '.potential2 .next-slide',
-                    },
+        const potentialSwiper = new Swiper(".potential2 .swiper-base", {
+            spaceBetween: 30,
+            loop: false,
+            speed: 800,
+            navigation: {
+                prevEl: ".potential2 .prev-slide",
+                nextEl: ".potential2 .next-slide",
+            },
             breakpoints: {
                 1025: {
                     slidesPerView: 3,
                 },
                 0: {
                     slidesPerView: 1,
-                }
-            }
+                },
+            },
         });
     }
 
     if (window.location.pathname.includes("investment-seminar")) {
-        const speakerSwiper = new Swiper(".seminar3 .swiper-base", {
+        const seminar3Swiper = new Swiper(".seminar3 .swiper-base", {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
             speed: 800,
             pagination: {
-                el: '.seminar3 .swiper-pagination',
-                clickable: true
+                el: ".seminar3 .swiper-pagination",
+                clickable: true,
             },
             autoplay: {
                 delay: 7000, // 2 seconds
                 disableOnInteraction: false, // Tiếp tục autoplay sau khi user tương tác
             },
-            autoHeight: true
+            autoHeight: true,
+        });
+
+        const seminar4Swiper = new Swiper(".seminar4 .swiper-base", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: false,
+            speed: 800,
+            navigation: {
+                nextEl: ".seminar4 .next-slide",
+                prevEl: ".seminar4 .prev-slide",
+            },
+            on: {
+                slideChange: function () {
+                    const currentSlide = this.slides[this.activeIndex];
+                    const month = currentSlide.dataset.month;
+                    document.querySelector(".month-display").textContent =
+                        month.toUpperCase();
+                },
+            },
         });
     }
 });
-
