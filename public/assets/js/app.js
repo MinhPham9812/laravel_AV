@@ -240,6 +240,10 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 60,
             slidesPerView: 1,
             autoHeight: true,
+            autoplay: {
+                delay: 7000, // 2 seconds
+                disableOnInteraction: false, // Tiếp tục autoplay sau khi user tương tác
+            },
         });
     }
 });

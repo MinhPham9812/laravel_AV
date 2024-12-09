@@ -69,3 +69,7 @@ Route::get('/investment-seminar', function (){
 Route::get('/q-a', function (){
     return view('qA');
 });
+
+Route::get('/contact', function (){
+    return view('contact');
+});

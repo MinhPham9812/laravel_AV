@@ -1,36 +1,162 @@
-<div id="footer">
-    <a href="{{ url('/') }}">
-        <div id="nav-logo-footer">
-            <img src="assets/images/logo_Aking.svg" alt="logo">
-            <div class="logo-text-footer">
-                <span class="logo-text-aking-footer">AKING</span>
-                <span class="logo-text-village-footer">VILLAGE</span>
-            </div>                 
+<footer class="footer">
+    <div class="l-container">
+        <div class="c-row">
+            <div class="c-row__col">
+                <img alt="logo" src="assets/images/logoAking.png">
+            </div>
+            <div class="c-row__col only-sp">
+                <h2 class="c-title1">Loremipsum</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequatur laboriosam alias nemo eos
+                    porro voluptates aliquam, voluptatum totam, dolorum vitae autem esse possimus maxime explicabo sunt
+                    nobis deserunt fuga?</p>
+            </div>
+            <div class="c-row__col c-row__footerNav">
+                <ul class="c-linklist only-pc">
+                    <li class="c-linklist__item">
+                        <h2>contact</h2>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">contact@Akingvilliage</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">contact@Akingvilliage</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">contact@Akingvilliage</a>
+                    </li>
+                </ul>
+
+                <ul class="c-linklist only-pc">
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                </ul>
+
+                <ul class="c-linklist only-pc">
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                </ul>
+
+                <ul class="c-linklist">
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="c-row__col c-row__col--social only-sp">
+                <ul class="c-social">
+                    <li class="c-social__item">
+                        <a href="/" target="_blank">
+                            <svg fill="none" height="32" viewBox="0 0 40 32" width="40"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M26.6139 2.39226C28.6011 2.39226 30.3951 3.20104 31.659 4.49952C33.2313 4.19688 34.7135 3.64543 36.0453 2.88166C35.53 4.43796 34.4339 5.74358 33.0083 6.56955C34.4033 6.40627 35.7387 6.0498 36.9779 5.51689C36.049 6.85306 34.8795 8.02952 33.529 8.96974C33.5417 9.25503 33.5489 9.54332 33.5489 9.83037C33.5489 18.6422 26.5964 28.8057 13.8832 28.8057C9.98092 28.8057 6.34624 27.6981 3.28942 25.8069C3.83627 25.8701 4.38636 25.9017 4.9369 25.9013C8.17474 25.9013 11.1564 24.8361 13.5224 23.0454C10.4962 22.994 7.94201 21.0639 7.06596 18.4161C7.49502 18.496 7.93059 18.5363 8.36711 18.5363C8.99544 18.5363 9.60753 18.4556 10.186 18.3025C7.02447 17.6918 4.64164 14.9961 4.64164 11.7633V11.6778C5.57421 12.1778 6.63906 12.4781 7.77366 12.5128C5.91814 11.3153 4.69816 9.27705 4.69816 6.96296C4.69816 5.73984 5.03972 4.59387 5.63437 3.61239C9.04238 7.64479 14.1351 10.3004 19.8803 10.5797C19.7618 10.0928 19.7005 9.57846 19.7005 9.0611C19.7005 5.37739 22.7952 2.39226 26.6139 2.39226ZM36.9779 5.51813H36.9839H36.9779ZM26.6138 0C21.8914 0 17.979 3.43195 17.3765 7.86628C13.5127 7.09413 9.99892 5.05938 7.47419 2.07426C7.24849 1.80718 6.96679 1.59246 6.64885 1.44513C6.3309 1.2978 5.98441 1.22144 5.63366 1.2214C5.57067 1.22141 5.50771 1.22381 5.4449 1.22858C5.06367 1.25895 4.69519 1.37915 4.36992 1.57925C4.04465 1.77936 3.77195 2.05361 3.57435 2.37933C2.73586 3.76326 2.29284 5.34853 2.293 6.96438C2.293 8.04275 2.48778 9.09302 2.85699 10.0751C2.46376 10.5099 2.23708 11.0787 2.23708 11.6792V11.7647C2.23708 14.1081 3.16845 16.2828 4.71492 17.9126C4.62593 18.3229 4.64577 18.7524 4.78166 19.1639C5.31502 20.7781 6.28608 22.1693 7.54514 23.2291C6.69971 23.4163 5.82731 23.5108 4.93679 23.5108C4.46599 23.5108 4.00783 23.4851 3.57431 23.4324C3.47811 23.4205 3.38311 23.4163 3.2875 23.4163C2.27737 23.4163 1.36043 24.0497 1.02011 25.0156C0.646723 26.0743 1.06104 27.2477 2.01822 27.8405C5.57056 30.0391 9.6736 31.2 13.8825 31.2C27.5626 31.2 35.7916 20.5472 35.9515 10.1414C37.0741 9.21758 38.0658 8.14682 38.8996 6.95832C39.2162 6.54476 39.3873 6.03912 39.3866 5.51929C39.3866 4.70527 38.9772 3.98575 38.3536 3.55329C38.6236 2.63281 38.3157 1.63637 37.5641 1.0275C37.1252 0.672229 36.5871 0.491603 36.0459 0.491603C35.6241 0.491209 35.2097 0.60159 34.8446 0.811587C34.0497 1.26738 33.1995 1.62803 32.3042 1.88765C30.6844 0.675295 28.6761 3.73814e-05 26.6138 0Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="c-social__item">
+                        <a href="/" target="_blank">
+                            <svg fill="none" height="31" viewBox="0 0 31 31" width="31"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.75 0.125H5.25C2.34583 0.125 0.125 2.34583 0.125 5.25V25.75C0.125 28.6542 2.34583 30.875 5.25 30.875H25.75C28.6542 30.875 30.875 28.6542 30.875 25.75V5.25C30.875 2.34583 28.6542 0.125 25.75 0.125ZM15.5 10.375C18.4042 10.375 20.625 12.5958 20.625 15.5C20.625 18.4042 18.4042 20.625 15.5 20.625C12.5958 20.625 10.375 18.4042 10.375 15.5C10.375 12.5958 12.5958 10.375 15.5 10.375ZM21.9917 6.95833C21.9917 5.7625 23.0167 4.90833 24.0417 4.90833C25.0667 4.90833 26.0917 5.93333 26.0917 6.95833C26.0917 7.98333 25.2375 9.00833 24.0417 9.00833C22.8458 9.00833 21.9917 8.15417 21.9917 6.95833ZM25.75 27.4583H5.25C4.225 27.4583 3.54167 26.775 3.54167 25.75V15.5H6.95833C6.95833 20.2833 10.7167 24.0417 15.5 24.0417C20.2833 24.0417 24.0417 20.2833 24.0417 15.5H27.4583V25.75C27.4583 26.775 26.775 27.4583 25.75 27.4583Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="c-social__item">
+                        <a href="/" target="_blank">
+                            <svg fill="none" height="32" viewBox="0 0 32 32" width="32"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30.0138 0H2.19143C1.73362 0 1.29455 0.181381 0.97083 0.504242C0.647107 0.827102 0.46524 1.265 0.46524 1.72159V29.4702C0.465356 29.9267 0.647273 30.3645 0.970984 30.6872C1.2947 31.01 1.73369 31.1913 2.19143 31.1913H17.1699V19.1125H13.0942V14.4052H17.1699V10.9334C17.1699 6.90455 19.6371 4.71119 23.2406 4.71119C24.9668 4.71119 26.4502 4.83899 26.8828 4.89661V9.107L24.3835 9.1083C22.4236 9.1083 22.0444 10.0371 22.0444 11.4V14.4056H26.7182L26.1097 19.1129H22.0444V31.1913H30.0142C30.472 31.1912 30.9109 31.0098 31.2345 30.6869C31.5582 30.3641 31.74 29.9263 31.74 29.4697V1.72159C31.74 1.265 31.5581 0.827102 31.2344 0.504242C30.9107 0.181381 30.4716 0 30.0138 0Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="c-social__item">
+                        <a href="/" target="_blank">
+                            <svg fill="none" height="32" viewBox="0 0 32 32" width="32"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.5224 10.8171C20.3505 8.51231 18.551 8.14355 16.8135 8.11282H16.7514C12.8421 8.11282 9.14994 11.3088 9.14994 15.734C9.14994 20.3742 13.3695 23.0785 16.7204 23.0785H16.7514C18.613 23.0785 20.878 22.7405 22.8637 19.9133H15.2311V12.077L31.458 12.1385C31.6131 12.9375 31.8924 14.935 31.8924 15.9798C31.8924 24.8609 25.8732 31.1913 16.5963 31.1913C7.78477 31.1913 0.617645 24.2463 0.617645 15.5803C0.617645 6.91434 7.78477 0 16.5963 0C20.909 0 25.5319 1.69017 28.4484 5.53147L22.5224 10.8171ZM16.7204 13.675V18.4075H24.8804C24.5081 20.405 22.3672 24.3999 16.7204 24.3999C11.7872 24.3999 7.8158 20.405 7.8158 15.6418C7.8158 10.8478 11.8803 6.82214 16.7204 6.82214C19.5438 6.82214 21.4364 8.05136 22.4603 9.03473L26.3697 5.37782C23.8875 3.07304 20.6298 1.69017 16.7204 1.69017C8.77762 1.69017 2.3241 7.86698 2.3241 15.6418C2.3241 23.3551 8.77762 29.5626 16.7204 29.5626C25.0976 29.5626 30.5272 23.8775 30.5272 15.9798C30.5272 15.0886 30.4652 14.3818 30.3411 13.675H16.7204Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="c-social__item">
+                        <a href="/" target="_blank">
+                            <svg fill="none" height="53" viewBox="0 0 53 53" width="53"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.6533 41.9268H11.0332V19.86H17.6533V41.9268ZM41.9267 41.9268H35.3067V30.1387C35.3067 27.067 34.2122 25.5378 32.043 25.5378C30.324 25.5378 29.2339 26.394 28.6867 28.1086V41.9268H22.0666C22.0666 41.9268 22.1549 22.0667 22.0666 19.86H27.292L27.6959 24.2733H27.8327C29.1898 22.0667 31.3589 20.5705 34.3335 20.5705C36.5954 20.5705 38.4247 21.1994 39.8216 22.7794C41.2272 24.3616 41.9267 26.4844 41.9267 29.4657V41.9268Z"
+                                    fill="white" />
+                                <path
+                                    d="M14.3432 17.6534C16.2322 17.6534 17.7635 16.1714 17.7635 14.3433C17.7635 12.5153 16.2322 11.0333 14.3432 11.0333C12.4541 11.0333 10.9228 12.5153 10.9228 14.3433C10.9228 16.1714 12.4541 17.6534 14.3432 17.6534Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="c-linklist c-linklist--bottom">
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                    <li class="c-linklist__item">
+                        <a href="" target="_self">Loremipsum</a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
-    </a>
-   
-    <div class="contact-wrapper">
-        <div class="contact">
-            <h5>CONTACT</h5>
-            <p>contact@Akingvillage</p>
-            <p>contact@Akingvillage</p>
-            <p>contact@Akingvillage</p>
-        </div>
-        <div class="contact">
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-        </div>
-        <div class="contact">
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-        </div>
-        <div class="contact">
-            <p>Lorem ipsum</p>
+        <div class="c-copyright">
+            <p class="c-subtitle">
+                <span>CÔNG TY CỔ PHẦN ĐẦU TƯ SONG PHÚ VĨNH LONG (“SONG PHÚ”)</span> <br> Mã số doanh nghiệp:
+                1501137423<br> Địa chỉ: Số 219, Tổ 17, Ấp Phú Ninh, Xã Song Phú, Huyện Tam Bình, Tỉnh Vĩnh Long, Việt
+                Nam<br> Điện thoại: 0375238899
+            </p>
         </div>
     </div>
-</div>
-<!-- end Footer --> 
+</footer>

@@ -77,5 +77,3 @@
         </ul>
     </div>
 </div>
-
-<!-- end Header -->
