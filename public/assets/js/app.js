@@ -228,4 +228,18 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
     }
+
+    if (currentPath.includes("q-a")) {
+        new Swiper(".answerQuestion .swiper-base", {
+            pagination: {
+                el: ".answerQuestion .swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            speed: 800,
+            spaceBetween: 60,
+            slidesPerView: 1,
+            autoHeight: true,
+        });
+    }
 });

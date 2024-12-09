@@ -1,4 +1,4 @@
-/* swiper-base.css */
+/* swiper_base.css */
 
 .swiper {
     position: relative;
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6vw; 
+    gap: 6vw;
     position: absolute;
     bottom: 20px;
     left: 0;

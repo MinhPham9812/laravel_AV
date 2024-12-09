@@ -30,7 +30,7 @@
                             href="{{ url('/investment-seminar') }}">HỘI THẢO ĐẦU TƯ</a></li>
                     <li class="header__menu-item"><a class="header__menu-link" href="{{ url('/news') }}">TIN TỨC</a>
                     </li>
-                    <li class="header__menu-item"><a class="header__menu-link" href="">Q&A</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="{{ url('/q-a') }}">Q&A</a></li>
                     <li class="header__menu-item"><a class="header__menu-link" href="">CONTACT</a></li>
                 </ul>
             </nav>

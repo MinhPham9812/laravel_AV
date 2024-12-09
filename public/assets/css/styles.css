@@ -7,6 +7,7 @@
 @import "pineapple_adviser.css";
 @import "investment_farm.css";
 @import "investment_serminar.css";
+@import "qA.css";
 * {
     box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của phần tử */
 }
@@ -427,6 +428,12 @@
 /* Breadcrumb--serminar */
 .breadcrumb--seminar {
     background-image: url("../images/seminarBreadcrumb.svg");
+    padding: 159px 0 136px;
+}
+
+/* Breadcrumb--q&a */
+.breadcrumb--qA {
+    background-image: url("../images/q&aBreadcrumb.svg");
     padding: 159px 0 136px;
 }
 
